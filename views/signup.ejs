@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up GameSuit</title>
+    <link rel="icon" href="/assets_website_landing_page/1652984168792.png" type="image/png">
+    <link rel="stylesheet" href="/signup/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="bg-form">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2 ms-4 text-end align-self-center" id="btn">
+                    <div class="backButton">
+                        <a href="/"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                            </svg> </a>
+                    </div>
+                </div>
+                <div class="form-area col-md-8 ms-5 mt-4 py-4 px-4">
+                    <div class="form">
+                        <div class="text">
+                            <h2>Sign Up</h2>
+                            <p>Please fill the form below !</p>
+                        </div>
+                        <form class="row g-3 needs-validation was-validated" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label text-white">First name:</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="First name"
+                                    maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your First Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label text-white">Last name:</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last name"
+                                    maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Last Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label text-white">Full name:</label>
+                                <input type="text" class="form-control" id="fullName" maxlength="30"
+                                    placeholder="Full name" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Full Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04" class="form-label text-white">Date of birth:</label>
+                                <input type="date" class="form-control" onchange="date()" id="dateOfBirth"
+                                    onkeydown="return false" required>
+                                <div class="invalid-feedback">
+                                    Please Select Your Birth Date!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom05" class="form-label text-white">Age:</label>
+                                <input type="" class="form-control" id="age" min="1" max="150" placeholder="Auto"
+                                    onkeydown="return false" required autocomplete="off">
+                                <div class="invalid-feedback">
+                                    The Age Auto Detected!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom06" class="form-label text-white">Gender:</label>
+                                <select class="form-select" required aria-label="select example" id="gender">
+                                    <option value="">Select Your Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Not Answer">Not Answer</option>
+                                </select>
+                                <div class="invalid-feedback">Please Select Your Gender!</div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label text-white">Username:</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control" id="username"
+                                        aria-describedby="inputGroupPrepend" placeholder="Username" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Username!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomPassword" class="form-label text-white">Password:</label>
+                                <div class="input-group has-validation">
+                                    <input type="password" class="form-control" id="password"
+                                        aria-describedby="inputGroupPrepend" onkeyup="pass()" placeholder="Password"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Password!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label text-white">Password Confirm:</label>
+                                <div class="has-validation">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" id="confirm_password"
+                                            aria-describedby="inputGroupPrepend" onkeyup="conPass()"
+                                            placeholder="Password Confirm" required>
+                                        <div class="invalid-feedback">
+                                            Please Confirm Your Password!
+                                        </div>
+                                    </div>
+                                    <div id="validation-pass">
+                                        <p id="text-pass"></p>
+                                    </div>
+                                    <!-- invalid-feedback  -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustomEmail" class="form-label text-white">Email:</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control" id="email"
+                                        aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                                    <div class="invalid-feedback valid-email">
+                                        Please Input Your Email!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom7" class="form-label text-white">Address:</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control" id="address"
+                                        aria-describedby="inputGroupPrepend" placeholder="Address" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Address!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="d-flex align-items-center">
+                            <button class="btn btn-primary btn-md" onclick="signup()">Sign Up</button>
+                            <p class="ms-auto mt-3">Have Account Already ?</p>
+                            <a href="/login" class="ms-3">Login here!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+<script type="text/javascript" src="/signup/signUp.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+</script>
+
+</html>

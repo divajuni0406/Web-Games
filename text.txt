@@ -1,0 +1,59 @@
+/*
+Challenge Binar Database :
+    - Users (Not Null)
+        - id (AI), (Not Null) (primary_key)
+        - username (Varchar(255))
+        - password
+        - email
+
+npx sequelize-cli model:generate --name users --attributes username:string,password:string,email:string
+
+    - Profile (Null)
+        - id
+        - user_id (foreign_key)
+        - first_name
+        - last_name
+        - full_name
+        - umur
+        - tanggal_lahir
+        - gender
+        - address
+
+npx sequelize-cli model:generate --name profile --attributes user_id:integer,first_name:string,last_name:string,full_name:string,umur:integer,tanggal_lahir:integer,gender:string, address:string
+
+    - History (Null)
+        - id
+        - user_id (foreign_key)
+        - win
+        - draw
+        - lose
+        - type_player (bot / user)
+
+npx sequelize-cli model:generate --name game_history --attributes user_id:integer,win:string,draw:string,lose:string,type_player:string
+*/
+
+        // create data profile database with (foreign-key)
+    let newDataProfile = {
+      user_id: res.dataValues.id,
+      first_name: "",
+      last_name: "",
+      full_name: res.dataValues.username,
+      umur: 0,
+      tanggal_lahir: 0,
+      gender: "",
+      address: "",
+    };
+    // create data profile database with (foreign-key)
+    profile.create(newDataProfile).then((resProf, errProf) => {
+      if (errProf) {
+        console.log(errProf);
+        res.send("post");
+      }
+      console.log(resProf);
+    });
+
+npx sequelize-cli model:generate --name game_total_score --attributes user_id:integer,win:integer,draw:integer,lose:integer,type_player:string,date_time:date
+
+    membuat database: npx sequelize-cli db:migrate
+
+

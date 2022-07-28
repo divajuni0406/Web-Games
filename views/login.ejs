@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/login-formGame/fonts/icomoon/style.css">
+  <link rel="icon" href="/assets_website_landing_page/1652984168792.png" type="image/png">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="/login-formGame/css/bootstrap.min.css">
+  <!-- Style -->
+  <link rel="stylesheet" href="/login-formGame/css/style.css">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Login Game Suit</title>
+</head>
+
+<body>
+
+
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" id="background"></div>
+    <div class="contents order-2 order-md-1">
+
+      <div class="container-fluid" id="form-area">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-sm-2 text-center" id="btn">
+            <div class="backButton">
+              <a href="/"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                  class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                </svg> </a>
+            </div>
+          </div>
+          <div class="col-sm-9 mt-5 py-5 px-5" id="form-inside">
+            <h3>Login to <strong>Game Suit</strong></h3>
+            <p class="mb-4">Play one of the most populer traditional game with computer or your friends !</p>
+            <form action="#" method="post">
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" name="username" placeholder="your-email@gmail.com"
+                  id="username">
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" name="password" placeholder="Your Password" id="password">
+              </div>
+
+              <div class="d-flex mb-5 align-items-center">
+                <span>Don't have account yet?</span>
+                <span class="ml-auto"><a href="/signup" class="your-account">Sign Up</a></span>
+                <span class="ml-1 mr-1">/</span>
+                <span><a href="/signup" class="your-account">Forget Password</a></span>
+              </div>
+              <input type="submit" id="loginBtn" value="Log In" class="btn btn-block btn-primary">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="/login-formGame/js/jquery-3.3.1.min.js"></script>
+<script src="/login-formGame/js/popper.min.js"></script>
+<script src="/login-formGame/js/bootstrap.min.js"></script>
+<script src="/login-formGame/js/main.js"></script>
+<script type="module" src="/login-formGame/js/login.js"></script>
+
+</html>
