@@ -7,7 +7,7 @@ import { getCookie, eraseCookie } from "../../cookies.js";
 const action = new Action();
 const gameStart = new GameStart();
 
-let userId = getCookie("userId");
+let userId = JSON.parse(getCookie("userId"));
 let type_player = "computer";
 let comTextLose = document.querySelector("#com-text-lose");
 let comTextWin = document.querySelector("#com-text-win");
@@ -97,7 +97,7 @@ function pick(playerOption, callback) {
 const playerOption = document.querySelectorAll(".playerChoice button");
 playerOption.forEach((value) => {
   document.querySelector("." + value.classList[2]).onclick = () => {
-    pick(value.classList[2], async function (payload) {
+    pick(value.classList[2], async (payload) => {
       playerTextWin.innerHTML = playerWinner;
       playerTextLose.innerHTML = playerLose;
       comTextWin.innerHTML = comWinner;

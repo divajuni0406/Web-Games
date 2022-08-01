@@ -38,7 +38,6 @@ let getScore = await HistoryGameHeads.aggregate([
       },
       pipeline: [
         {
-          // sort documents in 'players' collection
           $sort: {
             date_time: -1
           }

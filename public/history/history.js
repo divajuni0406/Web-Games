@@ -17,7 +17,7 @@ selectOption.addEventListener("change", () => {
 });
 
 async function getHistory() {
-  let userId = getCookie("userId");
+  let userId = JSON.parse(getCookie("userId"));
   let username = getCookie("username");
   document.querySelector(".title-history").innerText = `${JSON.parse(username)}'s Game History`;
 
