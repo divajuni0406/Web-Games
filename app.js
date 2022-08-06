@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 // call morgan
 const morgan = require("morgan");
@@ -20,5 +22,5 @@ app.use(Routes);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-const ConnectionMongoDB = require('./models/connection');
+const ConnectionMongoDB = require("./models/connection");
 ConnectionMongoDB();

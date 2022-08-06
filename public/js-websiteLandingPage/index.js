@@ -3,13 +3,15 @@ import { getCookie, eraseCookie } from "../../cookies.js";
 let eleSignUp = document.querySelector("#sign-up");
 let eleLogout = document.querySelector("#logout");
 let username = document.querySelector("#username");
-let dataUser = getCookie("username");
+let adminPage = document.querySelector("#admin");
+let userLogin = JSON.parse(getCookie("user"));
+console.log(userLogin);
 
 const loadPage = () => {
-  if (dataUser !== null) {
+  if (userLogin.username !== null) {
     eleSignUp.style.display = "none";
     eleLogout.style.display = "";
-    username.innerHTML = JSON.parse(dataUser);
+    username.innerHTML = userLogin.username;
   } else {
     eleSignUp.style.display = "";
     eleLogout.style.display = "none";
@@ -17,6 +19,15 @@ const loadPage = () => {
   }
 };
 loadPage();
+
+// const admin = () => {
+//   if (userLogin.type_user !== "admin") {
+//     adminPage.style.display = "none";
+//   } else {
+//     adminPage.style.display = "";
+//   }
+// };
+// admin();
 
 logout.addEventListener("click", () => {
   Swal.fire({
@@ -28,8 +39,7 @@ logout.addEventListener("click", () => {
     confirmButtonText: "Yes, logout!",
   }).then((result) => {
     if (result.isConfirmed) {
-      eraseCookie("username");
-      eraseCookie("userId");
+      eraseCookie("user");
       window.location.href = "/login";
     }
   });
@@ -38,7 +48,7 @@ logout.addEventListener("click", () => {
 const playGame = () => {
   let playBtn = document.querySelector("#button-play");
   let history = document.querySelector(".link-history");
-  if (dataUser === null) {
+  if (userLogin.username === null) {
     playBtn.setAttribute("href", "/login");
     history.setAttribute("href", "/login");
   } else {

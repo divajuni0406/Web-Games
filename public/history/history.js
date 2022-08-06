@@ -17,9 +17,10 @@ selectOption.addEventListener("change", () => {
 });
 
 async function getHistory() {
-  let userId = JSON.parse(getCookie("userId"));
-  let username = getCookie("username");
-  document.querySelector(".title-history").innerText = `${JSON.parse(username)}'s Game History`;
+  let userLogin = JSON.parse(getCookie("user"));
+  let userId = userLogin.id;
+  let username = userLogin.username;
+  document.querySelector(".title-history").innerText = `${username}'s Game History`;
 
   let formatDate = {
     weekday: "short",

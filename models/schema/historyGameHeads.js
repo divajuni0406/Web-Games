@@ -1,7 +1,10 @@
 const Mongoose = require('mongoose')
 
 var Schema = new Mongoose.Schema({
-    userId: { type: String, require: true },
+    userId: {
+        type: Mongoose.Schema.Types.ObjectId,
+        ref: "Users",
+    },
     total_win: { type: Number },
     total_draw: { type: Number },
     total_lose: { type: Number }

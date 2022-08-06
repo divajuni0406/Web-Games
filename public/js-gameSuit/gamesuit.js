@@ -7,7 +7,8 @@ import { getCookie, eraseCookie } from "../../cookies.js";
 const action = new Action();
 const gameStart = new GameStart();
 
-let userId = JSON.parse(getCookie("userId"));
+let userLogin = JSON.parse(getCookie("user"));
+let userId = userLogin.id;
 let type_player = "computer";
 let comTextLose = document.querySelector("#com-text-lose");
 let comTextWin = document.querySelector("#com-text-win");

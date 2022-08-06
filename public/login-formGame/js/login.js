@@ -26,9 +26,7 @@ loginBtn.addEventListener("click", async (e) => {
         showConfirmButton: false,
         timer: 2000,
       });
-
-      setCookie("username", JSON.stringify(result.sendData.username), 1);
-      setCookie("userId", JSON.stringify(result.sendData.id), 1);
+      setCookie("user", JSON.stringify(result.sendData), 1);
       return (window.location.href = "/");
     } else {
       Swal.fire({
