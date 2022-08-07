@@ -11,3 +11,12 @@ label {
 #example_info {
     color: white;
 }
+
+/* add data admin modal */
+.bg-form {
+    background-color: darkgrey;
+}
+
+.form-label {
+    color: black;
+}

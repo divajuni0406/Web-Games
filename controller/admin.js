@@ -14,12 +14,16 @@ exports.masterDataAdmin = (req, res) => {
     res.render("updateDataAdmin");
   };
   
-  exports.addViewAdmin = (req, res) => {
-    res.render("addDataAdmin");
-  };
+  // exports.addViewAdmin = (req, res) => {
+  //   res.render("addDataAdmin");
+  // };
   
   exports.masterDataUser = (req, res) => {
     res.render("masterDataUser");
+  };
+
+  exports.allHistoryUser = (req, res) => {
+    res.render("allHistoryUser");
   };
 
   exports.getUserData = async (req, res) => {
@@ -44,6 +48,36 @@ exports.masterDataAdmin = (req, res) => {
         });
       } else {
         res.status(401).send({ message: "Failed to get user data" });
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(500).send(error.message);
+    }
+  };
+
+  exports.getOneUserData = async (req, res) => {
+    let userId = req.params.id;
+    try {
+      let userData = await Profiles.aggregate([
+        { $match: { userId: ObjectId(userId) } },
+        {
+          $lookup: {
+            from: "users",
+            localField: "userId",
+            foreignField: "_id",
+            as: "userData",
+          },
+        },
+      ]);
+      if (userData) {
+        console.log(userData[0].userData[0].username);
+        res.send({
+          message: "Successfully to get admin data",
+          statusCode: "200",
+          result: userData,
+        });
+      } else {
+        res.status(401).send({ message: "Failed to get admin data" });
       }
     } catch (error) {
       console.log(error);
@@ -180,7 +214,7 @@ exports.masterDataAdmin = (req, res) => {
         const createProfile = await Profiles.create({ userId, first_name, last_name, full_name, age, date_of_birth, gender, address, type_user });
         console.log(createProfile);
         res.send({
-          message: `Successfull to register your account`,
+          message: `Successfull to add data admin`,
           resultData: { userCreate, createProfile },
           statusCode: 200,
         });

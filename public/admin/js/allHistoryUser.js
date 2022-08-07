@@ -17,10 +17,12 @@ selectOption.addEventListener("change", () => {
 });
 
 async function getHistory() {
-  let userLogin = JSON.parse(getCookie("user"));
-  let userId = userLogin.id;
-  let username = userLogin.username;
-  document.querySelector(".title-history").innerText = `${username}'s Game History`;
+  //   let userLogin = JSON.parse(getCookie("user"));
+  //   let userId = userLogin.id;
+  //   let username = userLogin.username;
+  //   document.querySelector(".title-history").innerText = `${username}'s Game History`;
+
+  let url = location.pathname.split("/")[2];
 
   let formatDate = {
     weekday: "short",
@@ -67,10 +69,17 @@ async function getHistory() {
         $(api.column(3).footer()).html(pageTotalDraw);
       },
     });
-    let response = await fetch(`/history/${userId}`);
+    // get who has the game history
+    let responseProfile = await fetch(`http://localhost:3000/fetch-data-user/${url}`);
+    const resultProfile = await responseProfile.json();
+    let profile = resultProfile.result[0].userData[0].username;
+    document.querySelector(".title-history").innerText = `${profile}'s Game History`;
+
+    // get user's game history
+    let response = await fetch(`/history/${url}`);
     const result = await response.json();
     let historyDetails = result.resultData[0].score_games;
-    console.log(historyDetails )
+    console.log(historyDetails);
     historyDetails.forEach((history, index) => {
       let date = new Date(history.date_time);
 
