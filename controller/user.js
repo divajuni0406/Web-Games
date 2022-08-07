@@ -1,9 +1,11 @@
-const Profiles = require("../models/schema/profile.js");
-const Users = require("../models/schema/users.js");
+const Profiles = require("../models/profile.js");
+const Users = require("../models/users.js");
 const Cryptr = require("cryptr");
 const SecretKey = "secretKey";
 const passConverter = new Cryptr(SecretKey);
 const JWT = require("jsonwebtoken");
+const Mongoose = require("mongoose");
+const ObjectId = Mongoose.Types.ObjectId;
 
 exports.loginGet = (req, res) => {
   res.render("login");
@@ -15,22 +17,6 @@ exports.home = (req, res) => {
 
 exports.signUpGet = (req, res) => {
   res.render("signup");
-};
-
-exports.masterDataAdmin = (req, res) => {
-  res.render("masterDataAdmin");
-};
-
-exports.updateViewAdmin = (req, res) => {
-  res.render("updateDataAdmin");
-};
-
-exports.addViewAdmin = (req, res) => {
-  res.render("addDataAdmin");
-};
-
-exports.masterDataUser = (req, res) => {
-  res.render("masterDataUser");
 };
 
 exports.loginPost = async (req, res) => {
@@ -118,73 +104,3 @@ exports.tokenProfile = async (req, res) => {
     });
   });
 };
-
-exports.getUserData = async (req, res) => {
-  try {
-    let userData = await Profiles.aggregate([
-      { $match: { type_user: "user" } },
-      {
-        $lookup: {
-          from: "users",
-          localField: "userId",
-          foreignField: "_id",
-          as: "userData",
-        },
-      },
-    ]);
-    console.log(userData[0]);
-    if (userData) {
-      res.send({
-        message: "Successfully to get user data",
-        statusCode: "200",
-        result: userData,
-      });
-    } else {
-      res.status(401).send({ message: "Failed to get user data" });
-    }
-  } catch (error) {
-    console.log(error);
-    res.status(500).send(error.message);
-  }
-};
-
-exports.getAdminData = async (req, res) => {
-  try {
-    let adminData = await Profiles.aggregate([
-      { $match: { type_user: "admin" } },
-      {
-        $lookup: {
-          from: "users",
-          localField: "userId",
-          foreignField: "_id",
-          as: "adminData",
-        },
-      },
-    ]);
-
-    if (adminData) {
-      res.send({
-        message: "Successfully to get admin data",
-        statusCode: "200",
-        result: adminData,
-      });
-    } else {
-      res.status(401).send({ message: "Failed to get admin data" });
-    }
-  } catch (error) {
-    console.log(error);
-    res.status(500).send(error.message);
-  }
-};
-
-exports.updateAdminUser = async (req, res) => {
-  
-}
-
-exports.deleteAdminUser = async (req, res) => {
-
-}
-
-exports.addAdminUser = async (req, res) => {
-
-}

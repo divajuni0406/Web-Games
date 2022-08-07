@@ -1,6 +1,6 @@
 .bg-form {
     background-image: linear-gradient(rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.4)), url('/assets_website_landing_page/features.jpg');
+            rgba(0, 0, 0, 0.4)), url('../index/assets-index/features.jpg');
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;

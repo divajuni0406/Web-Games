@@ -1,10 +1,12 @@
-require("dotenv").config();
-
+const dotenv = require("dotenv");
 const express = require("express");
 // call morgan
 const morgan = require("morgan");
+const path = require("path");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
+dotenv.config({ path: "./config/.env" });
 
 app.set("view engine", "ejs");
 // app.use(expressLayouts);
@@ -22,5 +24,5 @@ app.use(Routes);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
-const ConnectionMongoDB = require("./models/connection");
+const ConnectionMongoDB = require("./config/connection");
 ConnectionMongoDB();

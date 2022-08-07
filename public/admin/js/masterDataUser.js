@@ -22,7 +22,7 @@ $(document).ready(function () {
       console.log(result.result);
   
       result.result.forEach((user, index) => {
-        table.row.add([index + 1, user.first_name, user.last_name, user.userData[0].username, user.userData[0].email, "view"]).draw();
+        table.row.add([index + 1, user.first_name, user.last_name, user.full_name, user.userData[0].username, user.userData[0].email, "view"]).draw();
       });
     } catch (error) {
       console.log(error);

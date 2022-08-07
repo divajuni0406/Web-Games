@@ -29,7 +29,7 @@ body, html {
 }
 
 #home {
-    background-image: url('../assets_website_landing_page/main-bg.jpg');
+    background-image: url('../assets-index/main-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -130,7 +130,7 @@ body, html {
 
 /* Gameplay Options */
 #gameplay-option {
-    background-image: url('../assets_website_landing_page/the-games-bg.jpg');
+    background-image: url('../assets-index/the-games-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -151,7 +151,7 @@ body, html {
 
 /* Game Feature */
 #game-feature {
-    background-image: url('../assets_website_landing_page/features.jpg');
+    background-image: url('../assets-index/features.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -198,7 +198,7 @@ body, html {
 
 /* System Requirement */
 #SystemRequirement {
-    background-image: url('../assets_website_landing_page/requirements.png');
+    background-image: url('../assets-index/requirements.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -236,7 +236,7 @@ body, html {
 
 /* TopScore */
 #TopScore {
-    background-image: url('../assets_website_landing_page/top-score-bg.png');
+    background-image: url('../assets-index/top-score-bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

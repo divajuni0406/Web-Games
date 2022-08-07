@@ -1,5 +1,5 @@
-const HistoryGameHeads = require("../models/schema/historyGameHeads.js");
-const HistoryGameDetails = require("../models/schema/historyGameDetails.js");
+const HistoryGameHeads = require("../models/historyGameHeads.js");
+const HistoryGameDetails = require("../models/historyGameDetails.js");
 const Mongoose = require("mongoose");
 const ObjectId = Mongoose.Types.ObjectId;
 
