@@ -1,0 +1,67 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModalToggle" tabindex="-1" aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Select Player:</h5>
+      </div>
+      <div class="modal-body text-center">
+          <a class="select-game btn btn-lg" href="/gamesuit">Player VS Computer</a>
+          <a class="select-game btn btn-lg" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Create Room</a>
+          <a class="select-game btn btn-lg" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" data-bs-dismiss="modal">Find Room</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CREATE ROOM  -->
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area1">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Player Name</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col">
+                  <label for="validationCustom03" class="form-label text-dark">Give the code below to your friend:</label>
+                  <input type="number" class="form-control" id="code" maxlength="30"
+                      placeholder="Code" required readonly>
+                  <button class="btn btn-success" id="generate-btn">Generate The Code</button>
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-back" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back</button>
+        <button class="btn" id="bg-btn">Ready</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FIND ROOM  -->
+<div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area2">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel3">Player Name</h5>
+      </div>
+      <div class="modal-body">
+          <div class="row">
+              <div class="col">
+                  <label for="validationCustom03" class="form-label text-dark">Input the code correctly:</label>
+                  <input type="number" class="form-control" id="code2" maxlength="30"
+                      placeholder="Code" required>
+              </div>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-back2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Back</button>
+        <button class="btn" id="bg-btn2">Ready</button>
+      </div>
+    </div>
+  </div>
+</div>

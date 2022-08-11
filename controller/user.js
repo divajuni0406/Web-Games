@@ -4,8 +4,10 @@ const Cryptr = require("cryptr");
 const SecretKey = "secretKey";
 const passConverter = new Cryptr(SecretKey);
 const JWT = require("jsonwebtoken");
-const Mongoose = require("mongoose");
-const ObjectId = Mongoose.Types.ObjectId;
+// const Mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config({ path: "./config/.env" });
+
 
 exports.loginGet = (req, res) => {
   res.render("login");
@@ -33,9 +35,9 @@ exports.loginPost = async (req, res) => {
             id: findUser._id,
             username: findUser.username,
             email: findUser.email,
-            type_user: findUser.type_user,
+            type_user: getProfile.type_user,
           },
-          SecretKey
+          process.env.JWT_TOKEN_SECRET
         );
         res.send({
           message: `Welcome ${findUser.username}`,
@@ -90,11 +92,12 @@ exports.register = async (req, res) => {
   }
 };
 
+// check user profile from jwt token 
 exports.tokenProfile = async (req, res) => {
   let token_bearer = req.headers.authorization;
   let authToken = token_bearer.split(" ");
   if (authToken[0].toLowerCase() !== "bearer") return res.status(400).send({ message: "Invalid token type" });
-  JWT.verify(authToken[1], SecretKey, (err, resultToken) => {
+  JWT.verify(authToken[1], process.env.JWT_TOKEN_SECRET, (err, resultToken) => {
     if (err) return res.status(401).send({ message: "Unauthorized" });
     if (resultToken) console.log(resultToken);
     res.send({

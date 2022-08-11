@@ -1,0 +1,88 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-nav py-0 fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand px-4" href="#">
+            <img src="../images/index/1652984168792.png" class="img-fluid" alt="main-icon"
+                width="55" height="55">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse text-center" id="navbarNav">
+            <ul class="navbar-nav" id="nav-text">
+                <li class="nav-item">
+                    <a class="nav-link ms-4" id="hover-link" aria-current="page" href="/">HOME</a>
+                </li>
+                <li class="nav-item dropdown ms-4" id="admin">
+                    <a class="nav-link dropdown-toggle" id="hover-link" id="navbarDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        MASTER DATA
+                    </a>
+                    <ul class="dropdown-menu mx-auto w-25 text-center" id="nav-text">
+                        <li><a class="dropdown-item" id="dropdown-hover" href="/master-data-admin">DATA
+                                ADMIN</a></li>
+                        <li><a class="dropdown-item" id="dropdown-hover" href="/master-data-user">DATA USERS</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ms-4 link-history" id="hover-link" href="/history"
+                        target="_blank">GAME HISTORY</a>
+                </li>
+            </ul>
+        </div>
+        <div class="collapse navbar-collapse ms-4 text-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto" id="nav-text">
+                <li class="nav-item dropdown" id="sign-up">
+                    <a class="nav-link dropdown-toggle" id="hover-link" href="#" id="navbarDropdownMenuLink"
+                        role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        SIGN UP
+                    </a>
+                    <ul class="dropdown-menu mx-auto w-25 text-center" id="nav-text">
+                        <li><a class="dropdown-item" id="dropdown-hover" href="/signup">SIGN UP</a></li>
+                        <li><a class="dropdown-item" id="dropdown-hover" href="/login">LOGIN</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item" id="logout">
+                    <a class="nav-link" id="hover-link" href="#" id="navbarDropdownMenuLink" role="button"
+                        aria-expanded="false">
+                        LOGOUT
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <span class="d-none d-lg-block d-xl-block bold nav-link"
+                        style="color:aliceblue">|</span>
+                </li>
+                <li class="nav-item">
+                    <span class="nav-link" id="username"></span>
+                </li>
+                <li class="nav-item">
+                    <span class="d-none d-lg-block d-xl-block bold nav-link"
+                        style="color:aliceblue">|</span>
+                </li>
+                <li class="nav-item">
+                    <a href="https://store.steampowered.com/" class="nav-link">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-steam" id="steam-color"
+                                viewBox="0 0 16 16">
+                                <path
+                                    d="M.329 10.333A8.01 8.01 0 0 0 7.99 16C12.414 16 16 12.418 16 8s-3.586-8-8.009-8A8.006 8.006 0 0 0 0 7.468l.003.006 4.304 1.769A2.198 2.198 0 0 1 5.62 8.88l1.96-2.844-.001-.04a3.046 3.046 0 0 1 3.042-3.043 3.046 3.046 0 0 1 3.042 3.043 3.047 3.047 0 0 1-3.111 3.044l-2.804 2a2.223 2.223 0 0 1-3.075 2.11 2.217 2.217 0 0 1-1.312-1.568L.33 10.333Z" />
+                                <path
+                                    d="M4.868 12.683a1.715 1.715 0 0 0 1.318-3.165 1.705 1.705 0 0 0-1.263-.02l1.023.424a1.261 1.261 0 1 1-.97 2.33l-.99-.41a1.7 1.7 0 0 0 .882.84Zm3.726-6.687a2.03 2.03 0 0 0 2.027 2.029 2.03 2.03 0 0 0 2.027-2.029 2.03 2.03 0 0 0-2.027-2.027 2.03 2.03 0 0 0-2.027 2.027Zm2.03-1.527a1.524 1.524 0 1 1-.002 3.048 1.524 1.524 0 0 1 .002-3.048Z" />
+                            </svg></span>
+                        <span class="d-lg-none ms-2">Steam</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://www.xbox.com/id-ID/" class="nav-link">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-xbox" id="xbox-color" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.202 15.967a7.987 7.987 0 0 1-3.552-1.26c-.898-.585-1.101-.826-1.101-1.306 0-.965 1.062-2.656 2.879-4.583C6.459 7.723 7.897 6.44 8.052 6.475c.302.068 2.718 2.423 3.622 3.531 1.43 1.753 2.088 3.189 1.754 3.829-.254.486-1.83 1.437-2.987 1.802-.954.301-2.207.429-3.239.33Zm-5.866-3.57C.589 11.253.212 10.127.03 8.497c-.06-.539-.038-.846.137-1.95.218-1.377 1.002-2.97 1.945-3.95.401-.417.437-.427.926-.263.595.2 1.23.638 2.213 1.528l.574.519-.313.385C4.056 6.553 2.52 9.086 1.94 10.653c-.315.852-.442 1.707-.306 2.063.091.24.007.15-.3-.319Zm13.101.195c.074-.36-.019-1.02-.238-1.687-.473-1.443-2.055-4.128-3.508-5.953l-.457-.575.494-.454c.646-.593 1.095-.948 1.58-1.25.381-.237.927-.448 1.161-.448.145 0 .654.528 1.065 1.104a8.372 8.372 0 0 1 1.343 3.102c.153.728.166 2.286.024 3.012a9.495 9.495 0 0 1-.6 1.893c-.179.393-.624 1.156-.82 1.404-.1.128-.1.127-.043-.148ZM7.335 1.952c-.67-.34-1.704-.705-2.276-.803a4.171 4.171 0 0 0-.759-.043c-.471.024-.45 0 .306-.358A7.778 7.778 0 0 1 6.47.128c.8-.169 2.306-.17 3.094-.005.85.18 1.853.552 2.418.9l.168.103-.385-.02c-.766-.038-1.88.27-3.078.853-.361.176-.676.316-.699.312a12.246 12.246 0 0 1-.654-.319Z" />
+                            </svg></span>
+                        <span class="d-lg-none ms-2">Xbox</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

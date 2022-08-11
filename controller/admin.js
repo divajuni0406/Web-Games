@@ -7,7 +7,7 @@ const Mongoose = require("mongoose");
 const ObjectId = Mongoose.Types.ObjectId;
 
 exports.masterDataAdmin = (req, res) => {
-    res.render("masterDataAdmin");
+    res.render("master-views/admin");
   };
   
   exports.updateViewAdmin = (req, res) => {
@@ -19,7 +19,7 @@ exports.masterDataAdmin = (req, res) => {
   // };
   
   exports.masterDataUser = (req, res) => {
-    res.render("masterDataUser");
+    res.render("master-views/user");
   };
 
   exports.allHistoryUser = (req, res) => {
@@ -129,7 +129,7 @@ exports.masterDataAdmin = (req, res) => {
         },
       ]);
       if (adminData) {
-        console.log(adminData[0].adminData[0].username);
+        // console.log(adminData[0].adminData[0].username);
         res.send({
           message: "Successfully to get admin data",
           statusCode: "200",

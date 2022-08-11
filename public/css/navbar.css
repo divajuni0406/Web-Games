@@ -1,0 +1,32 @@
+#nav-text {
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+}
+
+.bg-nav {
+    background-color: rgba(0, 0, 0, 0.637);
+}
+
+.nav-margin-top{
+    margin-top: 6%;
+}
+
+#dropdown-hover:hover {
+    background-color: orange;
+}
+
+#steam-color {
+    color: orange;
+}
+
+#xbox-color {
+    color: orange;
+}
+
+#hover-link:hover {
+    color: orange;
+}
+
+#hover-link {
+    color: white;
+}

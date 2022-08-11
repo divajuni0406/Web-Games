@@ -1,0 +1,61 @@
+.bg-img {
+   background-color: #9C835F;
+    min-height: 100vh;
+}
+label {
+  color: white;
+}
+#example_info {
+  color: white;
+}
+
+/* add data admin modal */
+.bg-form {
+  background-color: darkgrey;
+}
+
+.form-label {
+  color: black;
+}
+
+a:link {
+  text-decoration: none !important;
+}
+
+#table-history-user_info {
+  color: white;
+}
+
+.form-area {
+  border: 3px solid gray;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.invalid-pass #text-pass {
+  color: rgb(216, 60, 60);
+  font-size: 14px;
+}
+
+.valid-pass #text-pass {
+  color: rgb(31, 121, 31);
+  font-size: 14px;
+}
+
+.text h2, p {
+  color: white;
+}
+
+.backButton {
+  width: 80%;
+}
+
+.bi-arrow-left-circle-fill {
+  width: 50%;
+  color: #724C21;
+}
+
+.bi-arrow-left-circle-fill:hover {
+  width: 55%;
+  color: red;
+}
