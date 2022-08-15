@@ -21,11 +21,11 @@ loginBtn.addEventListener("click", async (e) => {
     const result = await response.json();
 
     let isNotif = await notifications(result);
-    if(isNotif){
-      setCookie("user", JSON.stringify(result.sendData), 1);
+    if (isNotif) {
+      window.localStorage.setItem("username", username);
+      setCookie(`cookie-${username}`, JSON.stringify(result.sendData), 1);
       window.location.href = "/";
     }
-
   } catch (error) {
     console.log(error);
     errorNotification();

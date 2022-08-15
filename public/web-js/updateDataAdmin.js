@@ -6,7 +6,6 @@ let email = document.querySelector("#email");
 let formArea = document.querySelector(".form-area");
 
 let url = location.pathname.split("/")[2];
-console.log(url);
 
 async function getOne() {
   let response = await fetch(`/fetch-one-admin/${url}`);
@@ -37,7 +36,6 @@ async function update() {
     });
     const result = await response.json();
     if (result.statusCode === 200) {
-      console.log(result);
       await Swal.fire({
         position: "top-center",
         icon: "success",

@@ -9,7 +9,7 @@
         padding-top: 20%;
     }
 }
-
+requirements.png
 /* MEDIA QUERY UNDER 575px full manually because bootstrap responsive can handle maximum 576px(sm) only*/
 @media (max-width: 575px) {
     #main-text {
@@ -217,7 +217,7 @@
 /* MEDIA QUERY SYSTEM REQUIREMENT*/
 @media (max-width: 991px) {
     #SystemRequirement {
-        background-image: url('../assets_website_landing_page/requirements.png');
+        background-image: url('../images/index/requirements.png');
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 65% 50%;

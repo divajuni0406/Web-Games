@@ -42,6 +42,15 @@ class Action {
     const cursor = document.querySelector(".player");
     cursor.classList.remove("cursor");
   }
+
+  resetButtonPlayer() {
+    let textElement = document.getElementById("textVS");
+    textElement.innerHTML = "VS";
+    textElement.classList.remove("active-text-win");
+    textElement.classList.remove("active-text-win1");
+    const cursor = document.querySelector(".player");
+    cursor.classList.remove("cursor");
+  }
 }
 // Object Oriented Programming End Tag
 

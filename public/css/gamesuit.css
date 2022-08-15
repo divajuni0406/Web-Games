@@ -21,9 +21,24 @@ body {
     font-family: 'Open Sans';
 }
 
+.versusBox .versus .active-text-lose {
+    color: white;
+    background-color: red;
+    font-size: 300%;
+    font-family: 'Open Sans';
+}
+
 .versusBox .versus .active-text-win1 {
     color: white;
     background-color: green;
+    font-size: 300%;
+    font-family: 'Open Sans';
+    animation: spin1 0.8s;
+}
+
+.versusBox .versus .active-text-lose1 {
+    color: white;
+    background-color: red;
     font-size: 300%;
     font-family: 'Open Sans';
     animation: spin1 0.8s;

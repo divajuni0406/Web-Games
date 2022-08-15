@@ -7,7 +7,13 @@ import { getCookie, eraseCookie } from "../cookies.js";
 const action = new Action();
 const gameStart = new GameStart();
 
-let userLogin = JSON.parse(getCookie("user"));
+const socket = io();
+
+socket.on('connect', () => {
+  console.log('user connected')
+})
+let getUsername = window.localStorage.getItem("username");
+let userLogin = JSON.parse(getCookie(`cookie-${getUsername}`));
 let userId = userLogin.id;
 let type_player = "computer";
 let comTextLose = document.querySelector("#com-text-lose");
@@ -117,13 +123,14 @@ playerOption.forEach((value) => {
 
 async function saveScore(payload) {
   try {
-    await fetch("http://localhost:3000/gamesuit/save", {
+    await fetch("http://localhost:3000/save", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
+        Authorization: `Bearer ${userLogin.token}`,
       },
       body: JSON.stringify({
-        userId,
+        userId: userId,
         win: payload.win,
         lose: payload.lose,
         draw: payload.draw,

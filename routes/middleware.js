@@ -3,7 +3,7 @@ const Routes = express.Router();
 
 const middleware = require("../controller/middleware");
 
-Routes.get("/authUserType", middleware.authUserType);
-Routes.get("/auth", middleware.auth);
+Routes.post("/auth", middleware.auth);
+Routes.get("/authorization", middleware.authPage);
 
 module.exports = Routes;

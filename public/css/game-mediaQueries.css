@@ -63,6 +63,10 @@
     .versusBox .versus .active-text-win {
         font-size: 150%;
     }
+    
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
 
     .playerChoice img {
         width: 190%;
@@ -109,6 +113,10 @@
         font-size: 230%;
     }
 
+    .versusBox .versus .active-text-lose {
+        font-size: 230%;
+    }
+
     .playerChoice img {
         width: 60%;
     }
@@ -137,6 +145,10 @@
     }
 
     .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+
+    .versusBox .versus .active-text-lose {
         font-size: 150%;
     }
 
@@ -176,6 +188,9 @@
     .versusBox .versus .active-text-win {
         font-size: 150%;
     }
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
 
     .playerChoice img {
         width: 85%;
@@ -211,6 +226,10 @@
     }
 
     .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+
+    .versusBox .versus .active-text-lose {
         font-size: 150%;
     }
 

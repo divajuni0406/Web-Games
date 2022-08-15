@@ -1,7 +1,7 @@
 // Password Validation
-function validationForm(forms, passwordConfirm = '') {
+function validationForm(forms, passwordConfirm = "") {
   let validation = true;
- 
+
   forms.forEach((e) => {
     if (e.id == "email" && !validateEmail(e.value)) {
       validation = false;
@@ -16,20 +16,17 @@ function validationForm(forms, passwordConfirm = '') {
 }
 
 // Email Validation
-function validateEmail(email){
+function validateEmail(email) {
   let mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   let validationEmail = email.match(mailformat) ? true : false;
 
   return validationEmail;
 }
 
-
-
 function validatePassword(pass, passwordConfirm) {
   let validationPassword = pass === passwordConfirm ? true : false;
 
   return validationPassword;
 }
-
 
 export { validationForm };

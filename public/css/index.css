@@ -2,7 +2,7 @@ body, html {
     height: 100%;
 }
 
-/* modal  */
+/*================================================= MODAL ================================================== */
 .select-game {
     width: 100%;
     text-decoration: none;
@@ -28,8 +28,9 @@ body, html {
     background-color: rgb(59, 59, 87);
     color: white;
 }
+/*=============================================|| END MODAL ||================================================== */
 
-/* Main Menu */
+/*============================================= MAIN MENU ================================================== */
 #nav-text {
     font-family: 'Open Sans';
     font-size: 0.8rem;
@@ -68,9 +69,9 @@ body, html {
     box-shadow: inset 0 0 100px 20px black;
 }
 
-/* Main Menu End Style */
+/*=============================================|| MAIN MENU END ||================================================== */
 
-/* Main Call To Action */
+/*=========================================== MAIN CALL TO ACTION ============================================== */
 #main-text {
     font-family: 'Bebas Neue';
     color: white;
@@ -100,7 +101,7 @@ body, html {
     animation: hover 3s infinite;
 }
 
-/* Animation */
+/*====================================== ANIMATION MAIN CALL TO ACTION ======================================= */
 @keyframes hover {
     0% {
         background-color: orange;
@@ -123,6 +124,20 @@ body, html {
     }
 }
 
+@keyframes scroll-Down {
+    50% {
+        transform: translateY(-20px);
+    }
+
+    75% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 #text-story1 {
     font-family: 'Open Sans';
     color: white;
@@ -142,24 +157,9 @@ body, html {
     animation-name: scroll-Down;
 }
 
-/* Animation */
-@keyframes scroll-Down {
-    50% {
-        transform: translateY(-20px);
-    }
+/*========================================|| MAIN CALL TO ACTION END ||=========================================== */
 
-    75% {
-        transform: translateY(20px);
-    }
-
-    100% {
-        transform: translateY(0px);
-    }
-}
-
-/* Main Call To Action End Style */
-
-/* Gameplay Options */
+/*============================================= GAMEPLAY OPTION =============================================== */
 #gameplay-option {
     background-image: url('../images/index/the-games-bg.jpg');
     background-repeat: no-repeat;
@@ -178,9 +178,9 @@ body, html {
     font-family: 'Open Sans';
     font-size: 4rem;
 }
-/* Gameplay Options END Style */
+/*=============================================|| GAMEPLAY OPTION END ||=============================================== */
 
-/* Game Feature */
+/*=============================================== GAMEPLAY FEATURE ================================================ */
 #game-feature {
     background-image: url('../images/index/features.jpg');
     background-repeat: no-repeat;
@@ -225,9 +225,9 @@ body, html {
     transform: translateY(30%);
     right: 44%;
 }
-/* Game Feature End Stle  */
+/*===========================================|| GAMEPLAY FEATURE END ||=============================================== */
 
-/* System Requirement */
+/*============================================= SYSTEM REQUIREMENT =============================================== */
 #SystemRequirement {
     background-image: url('../images/index/requirements.png');
     background-repeat: no-repeat;
@@ -263,9 +263,9 @@ body, html {
     font-weight: bold;
     font-family: 'Open Sans';
 }
-/* System Requirement End Style  */
+/*=============================================|| SYSTEM REQUIREMENT END ||=============================================== */
 
-/* TopScore */
+/*=================================================== TOP SCORE ================================================= */
 #TopScore {
     background-image: url('../images/index/top-score-bg.png');
     background-repeat: no-repeat;
@@ -384,9 +384,9 @@ body, html {
     font-family: 'Open Sans';
     font-size: 1rem;
 }
-/* Top Score End Style  */
+/*=============================================|| TOP SCORE END ||=============================================== */
 
-/* Footer  */
+/*=================================================== FOOTER ==================================================== */
 #footer {
     background-color: black;
     background-repeat: no-repeat;
@@ -478,7 +478,7 @@ body, html {
     animation: direction 1.4s infinite;
 }
 
-/* Animation */
+/*============================================= ANIMATION FOOTER =============================================== */
 @keyframes direction {
     50% {
         transform: translateX(20px);
@@ -538,8 +538,9 @@ body, html {
 #text-footer a:hover {
     color: orange;
 }
-/* Footer End Style  */
-/* fixed buttom button  */
+/*================================================|| FOOTER END ||================================================ */
+
+/*============================================= FIXED BOTTOM BUTTON =============================================== */
 .back-button {
     position: fixed;
     width: 60px;
@@ -564,7 +565,7 @@ body, html {
     animation: hover1 2s infinite;
 }
 
-/* Animation */
+/*======================================= ANIMATION FIXED BOTTOM BUTTON ======================================= */
 @keyframes hover1 {
     0% {
         color: darkkhaki;
@@ -577,6 +578,113 @@ body, html {
     100% {
         color: darkkhaki
     }
+}/*==========================================|| FIXED BOTTOM BUTTON END ||============================================ */
+
+/*======================================= LOADING & ALERT FIND ROOM ANIMATION =============================================== */
+#text-loading {
+    font-family: 'Open Sans';
+    color: rgb(255, 220, 155);
+    font-weight: 500;
+    display: none;
+    animation: fadeIn 2s;
 }
 
-/* fixed buttom button end tag  */
+#loading-animation {
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#countdownFindRoom {
+    font-family: 'Open Sans';
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.dot-falling {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    box-shadow: 9999px 0 0 0 orange;
+    animation: dotFalling 1s infinite linear;
+    animation-delay: .1s;
+  }
+  
+  .dot-falling::before, .dot-falling::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-falling::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    animation: dotFallingBefore 1s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-falling::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    animation: dotFallingAfter 1s infinite linear;
+    animation-delay: .2s;
+  }
+  
+  @keyframes dotFalling {
+    0% {
+      box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 9999px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+  @keyframes dotFallingBefore {
+    0% {
+      box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 9984px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+  @keyframes dotFallingAfter {
+    0% {
+      box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 10014px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+
+/*=========================================|| LOADING ANIMATION END ||============================================ */

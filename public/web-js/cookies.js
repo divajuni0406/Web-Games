@@ -21,8 +21,21 @@ function getCookie(name) {
   return null;
 }
 // erase cookie
-function eraseCookie(name) {
-  document.cookie = name + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+function eraseCookie(type) {
+  let cookies = document.cookie.split(';');
+  cookies.forEach(cookie => {
+    if(cookie.search('code-') > -1){
+      let split = cookie.split('=');
+      document.cookie = split[0] + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+    }
+
+    if(type == 'logout'){
+      if(cookie.search('cookie') > -1){
+        let split = cookie.split('=');
+        document.cookie = split[0] + "=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+      }
+    }
+  })
 }
 
 export { eraseCookie, getCookie, setCookie };

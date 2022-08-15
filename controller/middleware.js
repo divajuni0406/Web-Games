@@ -1,44 +1,75 @@
-const Routes = require("../routes/adminRoutes");
 const JWT = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config({ path: "./config/.env" });
+const permissionAdminPath = ["/master-data-admin", "/master-data-user"];
+
+exports.authPage = (req, res) => {
+  res.render("auth")
+}
 
 exports.errorPage = (req, res) => {
   res.status(404);
   res.send("<h1>404</h1>");
 };
 
-exports.authToken = async (req, res, next) => {
+exports.authRender = async (req, res, next) => {
+  let authCookies = req.headers["cookie"];
+  let regex = /cookie-([\s\S]*)$/;
+  authCookies = regex.exec(authCookies);
+
+  try {
+    if (authCookies == null && !authCookies[1]) {
+      return res.redirect("/authorization");
+    }
+
+    authCookies = authCookies[1].split("=");
+    authCookies = authCookies[1].split(" ");
+    let cookie = JSON.parse(authCookies[0].replace(";", ""));
+
+    if (!cookie.token) {
+      return res.redirect("/authorization");
+    } else if (permissionAdminPath.includes(req.path) && cookie.type_user != "admin") {
+      return res.redirect("/authorization");
+    }
+    return next();
+  } catch (error) {
+    console.log(error);
+    return res.redirect("/authorization");
+  }
+};
+
+exports.authApiGeneral = async (req, res, next) => {
   let authHeader = req.headers["authorization"];
   let authToken = authHeader && authHeader.split(" ")[1];
   if (!authToken) {
-    return res.send({ message: "Unauthorized" });
+    return res.redirect("/authorization");
   }
   try {
-    const user = await JWT.verify(authToken, process.env.JWT_TOKEN_SECRET);
-    req.auth = user;
-    next();
+    let user = await JWT.verify(authToken, process.env.JWT_TOKEN_SECRET);
+    if(user.type_user === "user" || user.type_user === "admin"){
+      return next();
+    } else {
+      return res.redirect("/authorization");
+    }
   } catch (error) {
     return res.status(401).send({ message: "Invalid Token" });
   }
 };
 
-exports.authUserType = async (req, res, next) => {
+exports.authApiAdmin = async (req, res, next) => {
   let authHeader = req.headers["authorization"];
   let authToken = authHeader && authHeader.split(" ")[1];
   if (!authToken) {
-    return res.send({ message: "Unauthorized" });
+    return res.redirect("/authorization");
   }
   try {
-    const user = await JWT.verify(authToken, process.env.JWT_TOKEN_SECRET);
-    req.auth = user;
-    if(req.auth.type_user === "admin") {
-      next();
-    } else {
-      return res.status(401).send({ message: "Invalid Token" });
+    let authApi = await JWT.verify(authToken, process.env.JWT_TOKEN_SECRET);
+    if (authApi.type_user == "admin") {
+       return next();
     }
+    return res.redirect("/authorization");
   } catch (error) {
-    return res.status(401).send({ message: "Invalid Token" });
+    return res.redirect("/authorization");
   }
 };
 

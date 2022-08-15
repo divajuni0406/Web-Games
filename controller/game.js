@@ -7,6 +7,10 @@ exports.gameGet = (req, res) => {
   res.render("gamesuit");
 };
 
+exports.gamePlayer = (req, res) => {
+  res.render("gamesuit2Player");
+};
+
 exports.history = (req, res) => {
   res.render("history");
 };
@@ -26,7 +30,7 @@ exports.getHistoryUser = async (req, res) => {
     //       }
 
     // ])
-    console.log(userId);
+    
     let getScore = await HistoryGameHeads.aggregate([
       { $match: { userId: ObjectId(userId) } },
       {

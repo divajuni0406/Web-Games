@@ -37,7 +37,7 @@ exports.loginPost = async (req, res) => {
             email: findUser.email,
             type_user: getProfile.type_user,
           },
-          process.env.JWT_TOKEN_SECRET
+          process.env.JWT_TOKEN_SECRET, {expiresIn:"1d"}
         );
         res.send({
           message: `Welcome ${findUser.username}`,
@@ -73,13 +73,11 @@ exports.register = async (req, res) => {
       });
     } else {
       const userCreate = await Users.create({ username, password: passConverter.encrypt(password), email });
-      console.log(userCreate);
       // create data Profile database with (foreign-key)
       let { first_name, last_name, full_name, age, date_of_birth, gender, address } = req.body;
       let userId = userCreate.id;
       let type_user = "user";
       const createProfile = await Profiles.create({ userId, first_name, last_name, full_name, age, date_of_birth, gender, address, type_user });
-      console.log(createProfile);
       res.send({
         message: `Successfull to register your account`,
         resultData: { userCreate, createProfile },

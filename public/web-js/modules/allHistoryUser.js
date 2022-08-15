@@ -70,7 +70,9 @@ async function getHistory() {
       },
     });
     // get who has the game history
-    let responseProfile = await fetch(`http://localhost:3000/fetch-data-user/${url}`);
+    let responseProfile = await fetch(`http://localhost:3000/fetch-data-user/${url}`, {
+
+    });
     const resultProfile = await responseProfile.json();
     let profile = resultProfile.result[0].userData[0].username;
     document.querySelector(".title-history").innerText = `${profile}'s Game History`;
@@ -79,7 +81,6 @@ async function getHistory() {
     let response = await fetch(`http://localhost:3000/gamesuit/history/${url}`);
     const result = await response.json();
     let historyDetails = result.resultData[0].score_games;
-    console.log(historyDetails);
     historyDetails.forEach((history, index) => {
       let date = new Date(history.date_time);
 

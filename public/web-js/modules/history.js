@@ -7,7 +7,8 @@ $(document).ready(function () {
 getHistory();
 
 async function getHistory() {
-  let userLogin = JSON.parse(getCookie("user"));
+  let getUsername = window.localStorage.getItem("username");
+  let userLogin = JSON.parse(getCookie(`cookie-${getUsername}`));
   let userId = userLogin.id;
   let username = userLogin.username;
   document.querySelector(".title-history").innerText = `${username}'s Game History`;
@@ -57,15 +58,21 @@ async function getHistory() {
         $(api.column(3).footer()).html(pageTotalDraw);
       },
     });
-    let response = await fetch(`http://localhost:3000/history/${userId}`);
+    let response = await fetch(`http://localhost:3000/history/${userId}`, {
+      method: "GET",
+      headers: {
+        "Content-type": "application/json",
+        Authorization: `Bearer ${userLogin.token}`,
+      },
+    });
     const result = await response.json();
-
+    console.log(result)
     if (!result.resultData[0]) {
       return;
     }
 
     let historyDetails = result.resultData[0].score_games;
-
+    console.log(historyDetails)
     historyDetails.forEach((history, index) => {
       let date = new Date(history.date_time);
 
