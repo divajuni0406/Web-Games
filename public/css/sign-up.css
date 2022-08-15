@@ -1,0 +1,45 @@
+.bg-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)), url('../images/index/features.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a:link {
+    text-decoration: none !important;
+}
+
+.form-area {
+    border: 3px solid gray;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.invalid-pass #text-pass {
+    color: rgb(216, 60, 60);
+    font-size: 14px;
+}
+
+.valid-pass #text-pass {
+    color: rgb(31, 121, 31);
+    font-size: 14px;
+}
+
+.text h2, p {
+    color: white;
+}
+
+.backButton {
+    width: 80%;
+}
+
+.bi-arrow-left-circle-fill {
+    width: 50%;
+    color: #724C21;
+}
+
+.bi-arrow-left-circle-fill:hover {
+    width: 55%;
+    color: red;
+}

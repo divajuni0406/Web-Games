@@ -1,0 +1,274 @@
+body {
+    background-color: #9C835F;
+    min-height: 100vh;
+}
+
+/* DOM MANIPULATION */
+
+.cursor {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+.active {
+    background-color: blanchedalmond;
+}
+
+.versusBox .versus .active-text-win {
+    color: white;
+    background-color: green;
+    font-size: 300%;
+    font-family: 'Open Sans';
+}
+
+.versusBox .versus .active-text-lose {
+    color: white;
+    background-color: red;
+    font-size: 300%;
+    font-family: 'Open Sans';
+}
+
+.versusBox .versus .active-text-win1 {
+    color: white;
+    background-color: green;
+    font-size: 300%;
+    font-family: 'Open Sans';
+    animation: spin1 0.8s;
+}
+
+.versusBox .versus .active-text-lose1 {
+    color: white;
+    background-color: red;
+    font-size: 300%;
+    font-family: 'Open Sans';
+    animation: spin1 0.8s;
+}
+
+@keyframes spin1 {
+    50% {
+        transform: rotate(-50deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.activePlayer {
+    background-color: blanchedalmond;
+    animation-play-state: paused;
+}
+
+/* DOM End Tag */
+
+/* Navigation Area  */
+.backButton {
+    width: 5%;
+}
+
+.bi-arrow-left-circle-fill {
+    width: 60%;
+    color: #724C21;
+}
+
+.bi-arrow-left-circle-fill:hover {
+    width: 70%;
+    color: blanchedalmond;
+}
+
+.brand img {
+    width: 80%;
+}
+
+.brand {
+    width: 6%;
+}
+
+.title h1 {
+    font-family: 'Open Sans';
+    color: #F9B23D;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Navigation Area End Tag  */
+
+/* Game Area Section  */
+.gameArea {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.score-area {
+    height: 10%;
+    width: 25%;
+    display: flex;
+    border: solid 2px white;
+    margin-left: 2%;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.win {
+    background-color: green;
+}
+
+.lose {
+    background-color: red;
+}
+
+.draw-score {
+    height: 100%;
+    width: 35%;
+    display: flex;
+    border: solid 2px white;
+    background-color: gray;
+    margin-left: 2%;
+    border-radius: 20px;
+    justify-content: center;
+}
+
+.general-score-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3%;
+    margin-top: 5%;
+}
+
+.draw-score-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 21%;
+    margin-bottom: 36%;
+}
+
+/* .win{
+    background-color: green;
+}
+.lose{
+    background-color: red;
+    height: 110%;
+} */
+.score-text {
+    color: rgba(255, 255, 255, 0.432);
+}
+
+.playerChoice {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.playerChoice img {
+    width: 33%;
+}
+
+.playerChoice button {
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+
+.playerChoice #paper-p, #scissors-p {
+    margin-top: -3%;
+}
+
+.playerChoice button:hover {
+    background-color: blanchedalmond;
+    animation: pulse 1.4s infinite;
+}
+
+.playerChoice button:focus {
+    background-color: blanchedalmond;
+    animation-play-state: paused;
+    box-shadow: none;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.comBrain {
+    display: flex;
+    flex-direction: column;
+}
+
+.comBrain button {
+    margin-top: 0%;
+    margin-bottom: 9%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 20px;
+}
+
+.comBrain button:focus {
+    box-shadow: none;
+}
+
+.comBrain button:hover {
+    cursor: default;
+}
+
+.comBrain img {
+    width: 34%;
+}
+
+.versusBox {
+    width: 600%;
+    display: flex;
+    flex-direction: column;
+}
+
+.versus h1 {
+    font-size: 6rem;
+    font-family: 'Open Sans';
+    padding: 10% 10%;
+    color: red;
+    font-weight: bold;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.refresh img {
+    width: 40%;
+}
+
+.refresh {
+    position: absolute;
+    top: 570px;
+    transform: translateX(60px);
+    width: 15%;
+}
+
+.refresh button:hover {
+    animation: spin 1s infinite;
+}
+
+.refresh button:focus {
+    animation-play-state: paused;
+    box-shadow: none;
+}
+
+
+@keyframes spin {
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* Game Area Section End Tag  */

@@ -1,0 +1,264 @@
+/* Media Querry Nav Area  */
+@media (max-width: 499px) {
+    .header {
+        margin-top: 8%;
+        margin-bottom: 15%;
+    }
+
+    .backButton {
+        width: 10%;
+    }
+
+    .bi-arrow-left-circle-fill {
+        width: 70%;
+    }
+
+    .bi-arrow-left-circle-fill:hover {
+        width: 80%;
+    }
+
+    .brand img {
+        width: 100%;
+    }
+
+    .brand {
+        width: 15%;
+        padding-right: 4%;
+    }
+
+    .tittle h1 {
+        font-weight: 600;
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 500px) {
+    .backButton {
+        width: 8%;
+    }
+
+    .brand {
+        width: 8%;
+    }
+
+    .tittle h1 {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+}
+
+/* Media Querry Nav End Tag  */
+
+/* Media Querry Game Area Section  */
+@media (max-width: 399px) {
+
+    .versusBox {
+        width: 2400%;
+    }
+
+    .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+    
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
+
+    .playerChoice img {
+        width: 190%;
+    }
+
+    .playerChoice button {
+        margin-top: 15%;
+        margin-right: 9%;
+        padding-right: 30%;
+    }
+
+    .comBrain button {
+        margin-bottom: 36%;
+        margin-top: 15%;
+        margin-left: 7%;
+        padding-right: 28%;
+    }
+
+    .comBrain img {
+        width: 150%;
+    }
+
+    .versus h1 {
+        font-size: 4rem;
+        padding: 10% 10%;
+    }
+
+    .refresh img {
+        width: 120%;
+    }
+
+    .refresh {
+        top: 550px;
+        transform: translateX(30px);
+    }
+}
+
+@media (max-width: 990px) and (min-width: 768px) {
+    .versusBox {
+        width: 1000%;
+    }
+
+    .versusBox .versus .active-text-win {
+        font-size: 230%;
+    }
+
+    .versusBox .versus .active-text-lose {
+        font-size: 230%;
+    }
+
+    .playerChoice img {
+        width: 60%;
+    }
+
+    .comBrain img {
+        width: 66%;
+    }
+
+    .comBrain button {
+        margin-bottom: 14%;
+    }
+
+    .refresh img {
+        width: 50%;
+    }
+
+    .refresh {
+        top: 480px;
+        transform: translateX(40px);
+    }
+}
+
+@media (max-width: 767px) and (min-width: 700px) {
+    .versusBox {
+        width: 1000%;
+    }
+
+    .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
+
+    .playerChoice img {
+        width: 80%;
+    }
+
+    .playerChoice button {
+        margin-bottom: 18%;
+        margin-top: 5%;
+    }
+
+    .comBrain img {
+        width: 82%;
+    }
+
+    .comBrain button {
+        margin-bottom: 22%;
+        margin-top: 5%;
+    }
+
+    .versus h1 {
+        font-size: 4rem;
+    }
+
+    .refresh {
+        top: 530px;
+        transform: translateX(8px);
+    }
+}
+
+@media (max-width: 699px) and (min-width: 500px) {
+    .versusBox {
+        width: 1000%;
+    }
+
+    .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
+
+    .playerChoice img {
+        width: 85%;
+    }
+
+    .comBrain img {
+        width: 87%;
+    }
+
+    .comBrain button {
+        margin-bottom: 22%;
+    }
+
+    .versus h1 {
+        font-size: 4rem;
+    }
+
+    .refresh {
+        top: 480px;
+        transform: translateX(15px);
+
+    }
+
+    .refresh img {
+        width: 80%;
+    }
+
+}
+
+@media (max-width: 499px) and (min-width: 400px) {
+    .versusBox {
+        width: 1800%;
+    }
+
+    .versusBox .versus .active-text-win {
+        font-size: 150%;
+    }
+
+    .versusBox .versus .active-text-lose {
+        font-size: 150%;
+    }
+
+    .comBrain button {
+        margin-bottom: 38%;
+    }
+
+    .playerChoice img {
+        width: 105%;
+    }
+
+    .comBrain img {
+        width: 100%;
+    }
+
+    .versus h1 {
+        font-size: 4rem;
+    }
+
+    .refresh {
+        top: 470px;
+        transform: translateX(35px);
+
+    }
+
+    .refresh img {
+        width: 100%;
+    }
+
+}
+
+/* Media Querry Game Area Section End Tag  */

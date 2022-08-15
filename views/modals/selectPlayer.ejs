@@ -1,0 +1,93 @@
+<!-- Modal -->
+<div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="exampleModalToggleLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Select Player:</h5>
+      </div>
+      <div class="modal-body text-center select-player">
+        <a class="select-game btn btn-lg" id="p-vs-com" href="/gamesuit">Player VS Computer</a>
+        <a class="select-game btn btn-lg" id="create-room" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Create Room</a>
+        <a class="select-game btn btn-lg" id="find-room" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Find Room</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close-modal" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL CREATE ROOM  -->
+<div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area1">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2">Player Name</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <label for="validationCustom03" class="form-label text-dark">Give the code below to your friend:</label>
+            <input type="text" class="form-control" id="code" maxlength="10" placeholder="Code" required readonly>
+            <div class="input-group">
+              <button class="btn btn-success" id="generate-btn">Generate The Code</button>
+              <p class="ms-3 mt-2" display id="text-loading">Waiting for player 2 to join<p>
+                  <div class="row ms-3 mt-3" id="loading-animation">
+                    <div class="col-3">
+                      <div class="snippet" data-title=".dot-falling">
+                        <div class="stage">
+                          <div class="dot-falling"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-3">
+                      <div class="snippet" data-title=".dot-stretching">
+                        <div class="stage">
+                          <div class="dot-stretching"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="me-auto" id="countdownCreateRoom"></p>
+        <button class="btn btn-primary btn-back" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Back</button>
+        <button class="btn" id="bg-btn" disabled>Ready</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL FIND ROOM  -->
+<div class="modal fade" id="exampleModalToggle3" data-bs-backdrop="static" data-bs-keyboard="false" aria-hidden="true"
+  aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" id="modal-area2">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel3">Player Name</h5>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col">
+            <label for="validationCustom03" class="form-label text-dark">Input the code correctly:</label>
+            <input type="text" class="form-control" id="code2" maxlength="10" placeholder="Code" required>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <p class="me-auto" id="countdownFindRoom"></p>
+        <button class="btn btn-primary btn-back2" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"
+          data-bs-dismiss="modal">Back</button>
+        <button class="btn" id="bg-btn2" disabled>Ready</button>
+      </div>
+    </div>
+  </div>
+</div>

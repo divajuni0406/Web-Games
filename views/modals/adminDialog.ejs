@@ -1,0 +1,288 @@
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content bg-form">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Add Data Admin <i class="bi bi-plus-lg"></i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <input type="hidden" class="form-control" id="idAdmin" placeholder="Admin" maxlength="15">
+                    <div id="from-add-data">
+                        <form class="row g-3 needs-validation was-validated" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">First
+                                    name:</label>
+                                <input type="text" class="form-control form-input" id="firstName2"
+                                    placeholder="First name" maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your First Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Last
+                                    name:</label>
+                                <input type="text" class="form-control form-input" id="lastName2" placeholder="Last name"
+                                    maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Last Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label">Full
+                                    name:</label>
+                                <input type="text" class="form-control form-input" id="fullName2" maxlength="30"
+                                    placeholder="Full name" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Full Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom04" class="form-label">Date
+                                    of birth:</label>
+                                <input type="date" class="form-control form-input" id="dateOfBirth"
+                                    onkeydown="return false" required>
+                                <div class="invalid-feedback">
+                                    Please Select Your Birth Date!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom05" class="form-label">Age:</label>
+                                <input type="" class="form-control form-input" id="age" min="1" max="150"
+                                    placeholder="Auto" onkeydown="return false" required autocomplete="off">
+                                <div class="invalid-feedback">
+                                    The Age Auto Detected!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom06" class="form-label">Gender:</label>
+                                <select class="form-select form-input" required aria-label="select example" id="gender">
+                                    <option value="">Select Your Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Not Answer">Not Answer</option>
+                                </select>
+                                <div class="invalid-feedback">Please Select Your Gender!</div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomUsername" class="form-label">Username:</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control form-input" id="usernamee2"
+                                        aria-describedby="inputGroupPrepend" placeholder="Username" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Username!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustomPassword" class="form-label">Password:</label>
+                                <div class="input-group has-validation">
+                                    <input type="password" class="form-control form-input" id="password"
+                                        aria-describedby="inputGroupPrepend" placeholder="Password" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Password!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Password
+                                    Confirm:</label>
+                                <div class="has-validation">
+                                    <div class="input-group">
+                                        <input type="password" class="form-control form-input" id="confirm_password"
+                                            aria-describedby="inputGroupPrepend" placeholder="Password Confirm"
+                                            required>
+                                        <div class="invalid-feedback">
+                                            Please Confirm Your Password!
+                                        </div>
+                                    </div>
+                                    <div id="validation-pass">
+                                        <p id="text-pass"></p>
+                                    </div>
+                                    <!-- invalid-feedback  -->
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustomEmail" class="form-label">Email:</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control form-input" id="email2"
+                                        aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                                    <div class="invalid-feedback valid-email">
+                                        Please Input Your Email!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustom7" class="form-label">Address:</label>
+                                <div class="input-group has-validation">
+                                    <input type="text" class="form-control form-input" id="address"
+                                        aria-describedby="inputGroupPrepend" placeholder="Address" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Address!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="from-view-data">
+                        <form class="row g-3">
+                            <div class="col-md-4">
+                                <label for="" class="form-label">First name:</label>
+                                <input type="text" class="form-control firstName-view"
+                                    placeholder="First name" maxlength="15" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Last name:</label>
+                                <input type="text" class="form-control lastName-view" placeholder="Last name"
+                                    maxlength="15" readonly>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="" class="form-label">Full name:</label>
+                                <input type="text" class="form-control fullName-view" maxlength="30"
+                                    placeholder="Full name" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label">Username:</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control username-view"
+                                        aria-describedby="inputGroupPrepend" placeholder="Username" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label">Email:</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control email-view"
+                                        aria-describedby="inputGroupPrepend" placeholder="Email" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label text-white">Address:</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control address-view"
+                                        aria-describedby="inputGroupPrepend" placeholder="Address" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label text-white">Gender:</label>
+                                <input type="text" class="form-control gender-view" placeholder="Gender">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label text-white">Date of birth:</label>
+                                <input type="text" class="form-control dateOfBirth-view" onchange="date()"
+                                    onkeydown="return false" readonly>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="" class="form-label text-white">Age:</label>
+                                <input type="number" class="form-control age-view" min="1" max="150"
+                                    placeholder="Auto" onkeydown="return false" readonly autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="from-edit-data">
+                        <form class="row g-3 needs-validation was-validated" novalidate>
+                            <div class="col-md-4">
+                                <label for="validationCustom01" class="form-label">First name:</label>
+                                <input type="text" class="form-control firstName form-edit" id="firstName"
+                                    placeholder="First name" maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your First Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom02" class="form-label">Last name:</label>
+                                <input type="text" class="form-control lastName form-edit" id="lastName"
+                                    placeholder="Last name" maxlength="15" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Last Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="validationCustom03" class="form-label">Full name:</label>
+                                <input type="text" class="form-control fullName form-edit" id="fullName" maxlength="30"
+                                    placeholder="Full name" required>
+                                <div class="invalid-feedback">
+                                    Please Input Your Full Name!
+                                </div>
+                                <div class="valid-feedback">
+                                    Looks good!
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustomUsername" class="form-label">Username:</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                    <input type="text" class="form-control username form-edit" id="usernamee"
+                                        aria-describedby="inputGroupPrepend" placeholder="Username" required>
+                                    <div class="invalid-feedback">
+                                        Please Input Your Username!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="validationCustomEmail" class="form-label">Email:</label>
+                                <div class="input-group has-validation">
+                                    <input type="email" class="form-control email form-edit" id="email"
+                                        aria-describedby="inputGroupPrepend" placeholder="Email" required>
+                                    <div class="invalid-feedback valid-email">
+                                        Please Input Your Email!
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Looks good!
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="saveData">Save
+                    changes</button>
+            </div>
+        </div>
+    </div>
+</div>

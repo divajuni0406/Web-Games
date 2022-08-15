@@ -1,0 +1,690 @@
+body, html {
+    height: 100%;
+}
+
+/*================================================= MODAL ================================================== */
+.select-game {
+    width: 100%;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: 'Open Sans';
+    color: black;
+}
+
+.select-game:hover {
+    background-color: orange;
+
+}
+
+#modal-area, #modal-area1, #modal-area2{
+    background-color: rgb(165, 142, 99);
+}
+
+#bg-btn {
+    background-color: rgb(59, 59, 87);
+    color: white;
+}
+#bg-btn2 {
+    background-color: rgb(59, 59, 87);
+    color: white;
+}
+/*=============================================|| END MODAL ||================================================== */
+
+/*============================================= MAIN MENU ================================================== */
+#nav-text {
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+}
+
+.bg-nav {
+    background-color: rgba(0, 0, 0, 0.829);
+}
+
+#dropdown-hover:hover {
+    background-color: orange;
+}
+
+#steam-color {
+    color: orange;
+}
+
+#xbox-color {
+    color: orange;
+}
+
+#hover-link:hover {
+    color: orange;
+}
+
+#hover-link {
+    color: white;
+}
+
+#home {
+    background-image: url('../images/index/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    box-shadow: inset 0 0 100px 20px black;
+}
+
+/*=============================================|| MAIN MENU END ||================================================== */
+
+/*=========================================== MAIN CALL TO ACTION ============================================== */
+#main-text {
+    font-family: 'Bebas Neue';
+    color: white;
+    font-size: 5rem;
+    letter-spacing: 0.3rem;
+    padding-top: 9%;
+}
+
+#info-text {
+    font-family: 'Bebas Neue';
+    color: white;
+    font-size: 1.8rem;
+}
+
+
+#button-play {
+    font-family: 'Open Sans';
+    color: black;
+    font-weight: 500;
+}
+
+#button-play:hover {
+    animation-play-state: paused;
+}
+
+#button-play {
+    animation: hover 3s infinite;
+}
+
+/*====================================== ANIMATION MAIN CALL TO ACTION ======================================= */
+@keyframes hover {
+    0% {
+        background-color: orange;
+    }
+
+    25% {
+        background-color: pink;
+    }
+
+    50% {
+        background-color: aqua;
+    }
+
+    75% {
+        background-color: green;
+    }
+
+    100% {
+        background-color: orange;
+    }
+}
+
+@keyframes scroll-Down {
+    50% {
+        transform: translateY(-20px);
+    }
+
+    75% {
+        transform: translateY(20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#text-story1 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1rem;
+}
+
+#text-story1:hover {
+    color: orange;
+}
+
+#pt-story {
+    padding-top: 8%;
+}
+
+#pt-story {
+    animation: scroll-Down 1.4s infinite;
+    animation-name: scroll-Down;
+}
+
+/*========================================|| MAIN CALL TO ACTION END ||=========================================== */
+
+/*============================================= GAMEPLAY OPTION =============================================== */
+#gameplay-option {
+    background-image: url('../images/index/the-games-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    box-shadow: inset 0 0 100px 20px black;
+}
+
+#text-game-option {
+    font-family: 'Open Sans';
+    font-size: 2rem;
+}
+
+#text-game-option-1 {
+    font-family: 'Open Sans';
+    font-size: 4rem;
+}
+/*=============================================|| GAMEPLAY OPTION END ||=============================================== */
+
+/*=============================================== GAMEPLAY FEATURE ================================================ */
+#game-feature {
+    background-image: url('../images/index/features.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 106vh;
+    box-shadow: inset 0 0 100px 20px black;
+}
+
+#text-size-feature {
+    font-size: 2.2rem;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+#text-size-feature1 {
+    font-size: 5rem;
+    color: white;
+    font-family: 'Open Sans';
+}
+
+#text-title-feature p {
+    color: white;
+    font-family: 'Open Sans';
+}
+
+#text-title-feature h2 {
+    color: orange;
+    font-family: 'Open Sans';
+}
+
+#text-title-feature {
+    color: orange;
+    font-family: 'Open Sans';
+}
+
+.line {
+    position: absolute;
+    background-color: white;
+    height: 6.2rem;
+    width: 0.2%;
+    transform: translateY(30%);
+    right: 44%;
+}
+/*===========================================|| GAMEPLAY FEATURE END ||=============================================== */
+
+/*============================================= SYSTEM REQUIREMENT =============================================== */
+#SystemRequirement {
+    background-image: url('../images/index/requirements.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    box-shadow: inset 500px 50px 200px 10px black;
+}
+
+#TextTittleRequirement {
+    font-size: 1.2rem;
+    font-family: 'Open Sans';
+    color: white;
+    font-weight: bold;
+}
+
+#TextRequirement {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#TableText h1 {
+    color: orange;
+}
+
+#TableText p {
+    color: white;
+}
+
+#btn-check {
+    font-weight: bold;
+    font-family: 'Open Sans';
+}
+/*=============================================|| SYSTEM REQUIREMENT END ||=============================================== */
+
+/*=================================================== TOP SCORE ================================================= */
+#TopScore {
+    background-image: url('../images/index/top-score-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    box-shadow: inset 0 0 100px 20px black;
+}
+
+#TextTopScore h1 {
+    font-family: 'Open Sans';
+    font-size: 2.8rem;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 0.4rem;
+}
+
+#TextTopScore p {
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    color: white;
+
+}
+
+#TextTopScore .btn {
+    width: 50%;
+    font-weight: bold;
+}
+
+#header-text-img h2 {
+    color: orange;
+    font-family: 'Open Sans';
+    font-size: 1.6rem;
+}
+
+#header-text-img p {
+    color: lightslategray;
+    font-family: 'Open Sans';
+    font-size: 1.2rem;
+    position: absolute;
+    top: 18%;
+}
+
+#header-text-img svg {
+    color: grey;
+}
+
+#body-text h3 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#body-text p {
+    color: gray;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+}
+
+#header-text-img2 h2 {
+    font-family: 'Open Sans';
+    font-size: 1.6rem;
+    color: orange;
+}
+
+#header-text-img2 p {
+    font-family: 'Open Sans';
+    color: lightslategray;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 20%;
+}
+
+#header-text-img2 svg {
+    color: grey;
+}
+
+#body-text2 h3 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#body-text2 p {
+    color: gray;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+}
+
+#header-text-img3 h2 {
+    font-family: 'Open Sans';
+    font-size: 1.5rem;
+    color: orange;
+}
+
+#header-text-img3 p {
+    font-family: 'Open Sans';
+    color: lightslategray;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 18%;
+}
+
+#header-text-img3 svg {
+    color: grey;
+}
+
+#body-text3 h3 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#body-text3 p {
+    color: gray;
+    font-family: 'Open Sans';
+    font-size: 1rem;
+}
+/*=============================================|| TOP SCORE END ||=============================================== */
+
+/*=================================================== FOOTER ==================================================== */
+#footer {
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+}
+
+#text-newsletter h1 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#text-newsletter h3 {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.5rem;
+}
+
+#text-newsletter p {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#form-email .email {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#form-email input {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1.3rem;
+}
+
+#form-email .btn-text {
+    font-family: 'Open Sans';
+    color: black;
+    font-weight: bold;
+}
+
+#form-email p {
+    font-family: 'Open Sans';
+    color: white;
+    font-size: 1rem;
+}
+
+::placeholder {
+    color: orange;
+}
+
+#logo-color p {
+    color: white;
+    font-size: 0.8rem;
+    font-family: 'Open Sans';
+}
+
+#BottomMenu a:hover {
+    color: orange;
+}
+
+#BottomMenu1 a:hover {
+    color: orange;
+}
+
+#BottomMenu a {
+    font-size: 0.7rem;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    color: white;
+}
+
+#BottomMenu1 a {
+    font-size: 0.7rem;
+    font-family: 'Open Sans';
+    text-decoration: none;
+    color: white;
+}
+
+#logo-color svg {
+    color: orange;
+}
+
+#logo-color svg {
+    animation: direction 1.4s infinite;
+}
+
+/*============================================= ANIMATION FOOTER =============================================== */
+@keyframes direction {
+    50% {
+        transform: translateX(20px);
+    }
+
+    100% {
+        transform: translateX(1px);
+    }
+}
+
+#logo-color .fb {
+    color: white;
+}
+
+#logo-color .fb:hover {
+    color: orange;
+}
+
+#logo-color .twitter {
+    color: white;
+}
+
+#logo-color .twitter:hover {
+    color: orange;
+}
+
+#logo-color .yt {
+    color: red;
+}
+
+#logo-color .yt:hover {
+    color: orange;
+}
+
+#logo-color .ig {
+    color: white;
+}
+
+#logo-color .ig:hover {
+    color: orange;
+}
+
+#text-footer p {
+    font-family: 'Open Sans';
+}
+
+#text-footer a:link {
+    text-decoration: none;
+}
+
+#text-footer a {
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 0.8rem;
+}
+
+#text-footer a:hover {
+    color: orange;
+}
+/*================================================|| FOOTER END ||================================================ */
+
+/*============================================= FIXED BOTTOM BUTTON =============================================== */
+.back-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    color: darkkhaki;
+    text-align: center;
+    font-size: 30px;
+    z-index: 100;
+}
+
+.my-button {
+    margin-top: 0px;
+}
+
+.my-button:hover {
+    color: orange;
+}
+
+.back-button {
+    animation: hover1 2s infinite;
+}
+
+/*======================================= ANIMATION FIXED BOTTOM BUTTON ======================================= */
+@keyframes hover1 {
+    0% {
+        color: darkkhaki;
+    }
+
+    50% {
+        color: grey;
+    }
+
+    100% {
+        color: darkkhaki
+    }
+}/*==========================================|| FIXED BOTTOM BUTTON END ||============================================ */
+
+/*======================================= LOADING & ALERT FIND ROOM ANIMATION =============================================== */
+#text-loading {
+    font-family: 'Open Sans';
+    color: rgb(255, 220, 155);
+    font-weight: 500;
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#loading-animation {
+    display: none;
+    animation: fadeIn 2s;
+}
+
+#countdownFindRoom {
+    font-family: 'Open Sans';
+    font-weight: 500;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+.dot-falling {
+    position: relative;
+    left: -9999px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    box-shadow: 9999px 0 0 0 orange;
+    animation: dotFalling 1s infinite linear;
+    animation-delay: .1s;
+  }
+  
+  .dot-falling::before, .dot-falling::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  
+  .dot-falling::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    animation: dotFallingBefore 1s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-falling::after {
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: orange;
+    color: orange;
+    animation: dotFallingAfter 1s infinite linear;
+    animation-delay: .2s;
+  }
+  
+  @keyframes dotFalling {
+    0% {
+      box-shadow: 9999px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 9999px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 9999px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+  @keyframes dotFallingBefore {
+    0% {
+      box-shadow: 9984px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 9984px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 9984px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+  @keyframes dotFallingAfter {
+    0% {
+      box-shadow: 10014px -15px 0 0 rgba(152, 128, 255, 0);
+    }
+    25%,
+    50%,
+    75% {
+      box-shadow: 10014px 0 0 0 orange;
+    }
+    100% {
+      box-shadow: 10014px 15px 0 0 rgba(152, 128, 255, 0);
+    }
+  }
+  
+
+/*=========================================|| LOADING ANIMATION END ||============================================ */

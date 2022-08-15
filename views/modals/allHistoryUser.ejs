@@ -1,0 +1,49 @@
+<div class="modal fade" id="historyModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content bg-form">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Make sure the user have game history</h5>
+      </div>
+      <div class="modal-body">
+        <section class="">
+          <div class="container">
+            <input type="hidden" class="form-control" id="idAdmin" placeholder="Admin" maxlength="15">
+            <div class="row">
+              <div class="col m-auto mt-4">
+                <h1 class="text-center user-history text-dark"></h1>
+                <table id="table-all-history-user" class="table table-bordered table-striped" style="width:100%">
+                  <thead class="table-dark">
+                    <tr>
+                      <th class="col-1">No</th>
+                      <th class="col">Win</th>
+                      <th class="col">Lose</th>
+                      <th class="col">Draw</th>
+                      <th class="col">Type Player</th>
+                      <th class="col">Date Time</th>
+                    </tr>
+                  </thead>
+                  <tbody class="table-light">
+
+                  </tbody>
+                  <tfoot class="table-dark">
+                    <tr>
+                      <th>Total</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>-</th>
+                      <th>-</th>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+            </div>
+          </div>
+          <section id="last-section"></section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" id="close" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

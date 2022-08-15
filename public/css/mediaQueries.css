@@ -1,0 +1,626 @@
+/* MEDIA QUERY MAIN MENU */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    #main-text {
+        font-size: 3.5rem;
+    }
+
+    #pt-story {
+        padding-top: 20%;
+    }
+}
+requirements.png
+/* MEDIA QUERY UNDER 575px full manually because bootstrap responsive can handle maximum 576px(sm) only*/
+@media (max-width: 575px) {
+    #main-text {
+        font-size: 3.3rem;
+        letter-spacing: 0rem;
+        padding-top: 9%;
+    }
+
+    #info-text {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+    }
+
+    #pt-story {
+        padding-top: 50%;
+    }
+}
+
+/* MEDIA QUERY GAMEPLAY OPTION  */
+/* MEDIA QUERY UNDER 576px full manually because bootstrap responsive can handle maximum 576px(sm) only*/
+@media (max-width: 565px) {
+    #text-game-option {
+        font-size: 1.5rem;
+        padding-top: 10%;
+        text-align: left;
+    }
+
+    #text-game-option-1 {
+        font-size: 3.2rem;
+        text-align: left;
+    }
+
+    #carousel-game-option {
+        padding-top: 30%;
+        padding-right: 4%;
+        padding-left: 6%;
+    }
+}
+
+/* MEDIA QUERY GAME FEATURES */
+@media (min-width: 576px) and (max-width: 768px) {
+    #text-size-feature {
+        font-size: 1.4rem;
+    }
+
+    #text-size-feature1 {
+        font-size: 3rem;
+    }
+
+    #text-title-feature p {
+        font-size: 0.8rem;
+    }
+
+    #text-title-feature h2 {
+        font-size: 1.2rem;
+    }
+
+    #text-title-feature {
+        font-size: 1.2rem;
+    }
+
+    .line {
+        height: 6rem;
+        right: 47.5%;
+        position: absolute;
+    }
+}
+
+/* MEDIA QUERY */
+@media (min-width: 992px) and (max-width: 1030px) {
+    .line {
+        height: 6.2rem;
+        right: 43.5%;
+        transform: translateY(27%);
+    }
+}
+
+/* MEDIA QUERY */
+@media (min-width: 1031px) and (max-width: 1199px) {
+    .line {
+        height: 6.3rem;
+        right: 44%;
+        transform: translateY(27%);
+    }
+}
+
+/* MEDIA QUERY */
+@media (min-width: 769px) and (max-width: 991px) {
+    #text-size-feature {
+        font-size: 1.8rem;
+    }
+
+    #text-size-feature1 {
+        font-size: 3.5rem;
+    }
+
+    #text-title-feature p {
+        font-size: 1rem;
+    }
+
+    #text-title-feature h2 {
+        font-size: 1.2rem;
+    }
+
+    #text-title-feature {
+        font-size: 1.2rem;
+    }
+
+    .line {
+        height: 6.8rem;
+        right: 48%;
+        transform: translateY(27%);
+    }
+}
+
+/* MEDIA QUERY between 500px to 575px full manually because bootstrap responsive can handle maximum 576px(sm) only*/
+@media (max-width: 575px) and (min-width: 500px) {
+    #game-feature {
+        background-image: url('../assets_website_landing_page/features.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        box-shadow: inset 0 0 100px 20px black;
+    }
+
+    #collumn-feature {
+        text-align: left;
+        padding-left: 52%;
+    }
+
+    #collumn-feature0 {
+        text-align: left;
+        padding-left: 52%;
+    }
+
+    #text-size-feature {
+        font-size: 0.9rem;
+    }
+
+    #text-size-feature1 {
+        font-size: 2.3rem;
+    }
+
+    #collumn-feature1 {
+        text-align: left;
+        padding-left: 52%;
+        font-size: 0.7rem;
+        padding-top: 5%;
+        padding-right: 5%;
+    }
+
+    #collumn-feature1 h2 {
+        font-size: 1.2rem;
+    }
+
+    #text-title-feature h2 {
+        font-family: 'Open Sans';
+        font-size: 1.2rem;
+    }
+}
+
+/* MEDIA QUERY UNDER 500px full manually because bootstrap responsive can handle maximum 576px(sm) only*/
+@media (max-width: 499px) {
+    #game-feature {
+        background-image: url('../assets_website_landing_page/features.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 4% 50%;
+        min-height: 100vh;
+        box-shadow: inset 0 0 100px 20px black;
+    }
+
+    #collumn-feature {
+        text-align: left;
+        padding-left: 3%;
+    }
+
+    #collumn-feature0 {
+        text-align: left;
+        padding-left: 2%;
+    }
+
+    #text-size-feature {
+        font-size: 1.2rem;
+    }
+
+    #text-size-feature1 {
+        font-size: 3rem;
+    }
+
+    #collumn-feature1 {
+        text-align: left;
+        padding-right: 30%;
+        font-size: 0.9rem;
+        padding-top: 5%;
+        padding-left: 2%;
+    }
+
+    #text-title-feature h2 {
+        font-family: 'Open Sans';
+    }
+}
+
+/* MEDIA QUERY SYSTEM REQUIREMENT*/
+@media (max-width: 991px) {
+    #SystemRequirement {
+        background-image: url('../images/index/requirements.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 65% 50%;
+        min-height: 100vh;
+        box-shadow: inset 250px 10px 100px 10px black;
+    }
+
+    #TextTittleRequirement {
+        font-size: 1rem;
+    }
+
+    #TextRequirement {
+        font-size: 2rem;
+    }
+}
+
+/* MEDIA QUERRY */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    #TextTopScore h1 {
+        font-size: 2.4rem;
+    }
+
+    #header-text-img h2 {
+        font-size: 1.4rem;
+    }
+
+    #header-text-img2 h2 {
+        font-size: 1.3rem;
+    }
+
+    #header-text-img2 p {
+        font-size: 1.1rem;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* MEDIA QUERRY */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    #TextTopScore h1 {
+        font-size: 1.5rem;
+    }
+
+    #TextTopScore p {
+        font-size: 1rem;
+    }
+
+    #TextTopScore .btn {
+        font-size: 0.8rem;
+    }
+
+    #header-text-img h2 {
+        font-size: 1.4rem;
+    }
+
+    #header-text-img2 h2 {
+        font-size: 1.3rem;
+    }
+
+    #header-text-img2 p {
+        font-size: 1.1rem;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.2rem;
+    }
+}
+
+/* MEDIA QUERRY TOP SCORE*/
+@media (min-width: 576px) and (max-width: 767px) {
+
+    #TextTopScore h1 {
+        font-size: 2.5rem;
+        letter-spacing: 0rem;
+    }
+
+    #TextTopScore p {
+        font-size: 1rem;
+    }
+
+    #TextTopScore .btn {
+        font-size: 0.8rem;
+    }
+
+    #header-text-img h2 {
+        font-size: 1.8rem;
+    }
+
+    #header-text-img svg {
+        width: 15%;
+    }
+
+    #header-text-img2 h2 {
+        font-size: 1.8rem;
+    }
+
+    #header-text-img2 svg {
+        width: 15%;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.8rem;
+    }
+
+    #header-text-img3 svg {
+        width: 15%;
+    }
+}
+
+/* MEDIA QUERRY between 364px - 575px full manually because bootstrap responsive can handle maximum 576px(sm) only */
+@media (max-width: 575px) and (min-width: 364px) {
+
+    #TextTopScore h1 {
+        font-size: 1.7rem;
+        letter-spacing: 0;
+    }
+
+    #TextTopScore p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    #TextTopScore button {
+        width: 30%;
+        margin-bottom: 15px;
+    }
+
+    /* CARD 1 */
+    #header-text-img svg {
+        width: 18%;
+
+    }
+
+    #header-text-img img {
+        width: 30%;
+    }
+
+    #header-text-img .head-text {
+        font-size: 1.3rem;
+        width: 48%;
+    }
+
+    #body-text h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text p {
+        font-size: 1rem;
+    }
+
+    /* CARD 2 */
+    #header-text-img2 svg {
+        width: 18%;
+
+    }
+
+    #header-text-img2 img {
+        width: 30%;
+    }
+
+    #header-text-img2 .head-text {
+        font-size: 1.3rem;
+        width: 50%;
+    }
+
+    #body-text2 h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text2 p {
+        font-size: 1rem;
+    }
+
+    /* CARD 3 */
+    #header-text-img3 svg {
+        width: 18%;
+
+    }
+
+    #header-text-img3 img {
+        width: 30%;
+    }
+
+    #header-text-img3 .head-text {
+        width: 50%;
+    }
+
+    #header-text-img3 p {
+        font-size: 1rem;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.2rem;
+    }
+
+    #body-text3 h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text3 p {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERRY UNDER 363px full manually because bootstrap responsive can handle maximum 576px(sm) only */
+@media (max-width: 363px) {
+
+    #TextTopScore h1 {
+        font-size: 1.7rem;
+        letter-spacing: 0;
+    }
+
+    #TextTopScore p {
+        font-size: 1.2rem;
+        width: 90%;
+    }
+
+    #TextTopScore button {
+        width: 30%;
+        margin-bottom: 15px;
+    }
+
+    /* CARD 1 */
+    #header-text-img svg {
+        width: 18%;
+
+    }
+
+    #header-text-img img {
+        width: 30%;
+    }
+
+    #header-text-img .head-text {
+        width: 50%;
+    }
+
+    #header-text-img h2 {
+        font-size: 1.5rem;
+    }
+
+    #header-text-img p {
+        font-size: 1rem;
+    }
+
+    #body-text h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text p {
+        font-size: 1rem;
+    }
+
+    /* CARD 2 */
+    #header-text-img2 svg {
+        width: 18%;
+
+    }
+
+    #header-text-img2 img {
+        width: 30%;
+    }
+
+    #header-text-img2 .head-text {
+        width: 50%;
+    }
+
+    #header-text-img2 h2 {
+        font-size: 1.5rem;
+    }
+
+    #header-text-img2 p {
+        font-size: 1rem;
+    }
+
+    #body-text2 h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text2 p {
+        font-size: 1rem;
+    }
+
+    /* CARD 3 */
+    #header-text-img3 svg {
+        width: 18%;
+    }
+
+    #header-text-img3 img {
+        width: 30%;
+    }
+
+    #header-text-img3 .head-text {
+        width: 52%;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.9rem;
+    }
+
+    #header-text-img3 p {
+        font-size: 1rem;
+    }
+
+    #header-text-img3 h2 {
+        font-size: 1.2rem;
+    }
+
+    #body-text3 h3 {
+        font-size: 1.1rem;
+    }
+
+    #body-text3 p {
+        font-size: 1rem;
+    }
+}
+
+/* MEDIA QUERY FOOTER */
+/* MEDIA QUERY UNDER 575px full manually because bootstrap responsive can handle maximum 576px(sm) only */
+@media (max-width: 575px) {
+    #text-newsletter h1 {
+        font-size: 2rem;
+    }
+
+    #text-newsletter h3 {
+        font-size: 1.5rem;
+    }
+
+    #text-newsletter p {
+        font-size: 1rem;
+    }
+
+    #logo-color {
+        margin-right: 3%;
+    }
+
+    #logo-color p {
+        font-size: 0.7rem;
+    }
+
+    #BottomMenu1 {
+        width: 13%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #BottomMenu {
+        width: 37%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    #BottomMenu1 a {
+        font-size: 0.6rem;
+    }
+
+    #BottomMenu a {
+        font-size: 0.6rem;
+    }
+
+    #logo-color .bi-arrow-right {
+        width: 20%;
+    }
+
+    #logo-color .FollowUs {
+        width: 37%;
+    }
+
+    #logo-color .sosmed {
+        width: 15%;
+        text-align: start;
+        padding-right: 11%;
+    }
+
+    #form-email .email {
+        font-size: 1.2rem;
+    }
+
+    #form-email input {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    #form-email p {
+        font-size: 1.1rem;
+    }
+
+
+    #text-footer p {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    #text-footer a {
+        font-size: 0.7rem;
+        margin-left: 10px;
+    }
+
+    #text-footer {
+        padding-bottom: 12px;
+    }
+}
+
