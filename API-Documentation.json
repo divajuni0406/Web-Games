@@ -1,0 +1,542 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Game Data API",
+    "description": "List data Game Suite's API",
+    "contact": {
+      "email": "divajuni0406@gmail.com"
+    },
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "localhost"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Page Render",
+      "description": "Everything about page path render"
+    },
+    {
+      "name": "Users Profile Data",
+      "description": "Everything about Users Profile"
+    },
+    {
+      "name": "Users Game History Data",
+      "description": "Everything about Users Game History"
+    },
+    {
+      "name": "Admin Only!",
+      "description": "Everything here need access that users should have authorization to access it"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "Home Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "404": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "Login Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "404": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/signup": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "Signup Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "404": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/history": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "History Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/gamesuit": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "Game Suite Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/gamesuit-player": {
+      "get": {
+        "tags": ["Page Render"],
+        "summary": "Game Suite Multiplayer Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/master-data-admin": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "Master Data Admin For Admin Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/master-data-user": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "Master Data Admin For User Page Rendering",
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/allHistoryUser/{id}": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "Update User View Rendering by User's Id",
+        "description": "",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful to render"
+          },
+          "400": {
+            "description": "Page not found"
+          }
+        }
+      }
+    },
+    "/history/{id}": {
+      "get": {
+        "tags": ["Users Game History Data"],
+        "summary": "Get One User Game History",
+        "description": "",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful to get your game history"
+          },
+          "400": {
+            "description": "Failed to get your game history"
+          }
+        }
+      }
+    },
+    "/loginData": {
+      "post": {
+        "tags": ["Users Profile Data"],
+        "summary": "Get user's username and password to login",
+        "description": "For login only need username and password, and compare when user input them with data from database",
+        "requestBody": {
+          "description": "Find username and password user with compare them to database",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" },
+                  "password": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Welcome name of user"
+          },
+          "400": {
+            "description": "Failed to login. Invalid Username or Password"
+          }
+        }
+      }
+    },
+    "/register": {
+      "post": {
+        "tags": ["Users Profile Data"],
+        "summary": "Create user's profile",
+        "description": "User profile including: first name, last name, full name and others information and must be filled completly",
+        "requestBody": {
+          "description": "Create user's profile",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "first_name": { "type": "string" },
+                  "last_name": { "type": "string" },
+                  "full_name": { "type": "string" },
+                  "age": { "type": "number" },
+                  "date_of_birth": { "type": "string" },
+                  "gender": { "type": "string" },
+                  "username": { "type": "string" },
+                  "password": { "type": "string" },
+                  "email": { "type": "string" },
+                  "address": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfull to register your account"
+          },
+          "400": {
+            "description": "Sorry the email or username has been taken, please create the other one !"
+          },
+          "500": {
+            "description": "Error message"
+          }
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "tags": ["Users Game History Data"],
+        "summary": "Save User's Game History",
+        "description": "Save all activities game by user such as = win, lose, draw",
+        "requestBody": {
+          "description": "Create to save users game history",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "userId": { "type": "string" },
+                  "win": { "type": "number" },
+                  "draw": { "type": "number" },
+                  "lose": { "type": "number" },
+                  "type_player": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful to get your game history"
+          },
+          "400": {
+            "description": "Failed to get your game history"
+          }
+        }
+      }
+    },
+    "/fetch-data-admin": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "To get data admin",
+        "description": "To get data admin and show to front end",
+        "responses": {
+          "200": {
+            "description": "Successfully to get admin data"
+          },
+          "401": {
+            "description": "Failed to get admin data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/fetch-one-admin/{id}": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "To get one data admin",
+        "description": "To get one data admin and show to front end",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully to get admin data"
+          },
+          "401": {
+            "description": "Failed to get admin data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/fetch-data-user": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "To get one data admin",
+        "description": "To get one data admin and show to front end",
+        "responses": {
+          "200": {
+            "description": "Successfully to get user data"
+          },
+          "401": {
+            "description": "Failed to get user data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/fetch-data-user/{id}": {
+      "get": {
+        "tags": ["Admin Only!"],
+        "summary": "To get one data admin",
+        "description": "To get one data admin and show to front end",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully to get user data"
+          },
+          "401": {
+            "description": "Failed to get user data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/delete-data-admin/{id}": {
+      "delete": {
+        "tags": ["Admin Only!"],
+        "summary": "To delete one data admin",
+        "description": "To delete one data admin",
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully to delete user data"
+          },
+          "401": {
+            "description": "Failed to delete user data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/update-data-admin/{id}": {
+      "put": {
+        "tags": ["Admin Only!"],
+        "summary": "To update one data admin",
+        "description": "To update one data admin and show to front end",
+        "requestBody": {
+          "description": "Update one user data of admin",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "first_name": { "type": "string" },
+                  "last_name": { "type": "string" },
+                  "full_name": { "type": "string" },
+                  "age": { "type": "number" },
+                  "date_of_birth": { "type": "string" },
+                  "gender": { "type": "string" },
+                  "username": { "type": "string" },
+                  "password": { "type": "string" },
+                  "email": { "type": "string" },
+                  "address": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "type": "integer",
+            "required": "true",
+            "description": "id user"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully to update admin data"
+          },
+          "401": {
+            "description": "Failed to update admin data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    },
+    "/add-data-admin": {
+      "post": {
+        "tags": ["Admin Only!"],
+        "summary": "To add new data admin",
+        "description": "To add new data admin and show to front end",
+        "requestBody": {
+          "description": "Add new user data of admin",
+          "required": "true",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "first_name": { "type": "string" },
+                  "last_name": { "type": "string" },
+                  "full_name": { "type": "string" },
+                  "age": { "type": "number" },
+                  "date_of_birth": { "type": "string" },
+                  "gender": { "type": "string" },
+                  "username": { "type": "string" },
+                  "password": { "type": "string" },
+                  "email": { "type": "string" },
+                  "address": { "type": "string" }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully to add admin data"
+          },
+          "401": {
+            "description": "Failed to add admin data"
+          },
+          "500": {
+            "description": "Error Message"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "JWT Authorization For CRUD Data",
+        "bearerFormat": "JWT"
+      },
+      "cookieAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "description": "Cookie Authorization For Page Render",
+        "name": "Cookie"
+      }
+
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    },
+    {
+      "cookieAuth": []
+    }
+  ]
+}

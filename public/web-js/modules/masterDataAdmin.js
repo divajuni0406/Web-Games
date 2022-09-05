@@ -265,7 +265,7 @@ $("#example tbody").on("click", ".edit-btn", async function (e) {
     },
   });
   const result = await response.json();
-
+  
   document.querySelector("#exampleModalLabel").innerHTML = `Edit data: ${result.result[0].full_name}`;
 
   first_name = document.querySelector(".firstName");

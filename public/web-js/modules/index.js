@@ -13,10 +13,12 @@ socket.on("connect", () => {
   console.log("user connected");
 });
 
+// 1
 socket.on("user-has-connected", (user) => {
   console.log(`player ${user} has connected`);
 });
 
+// 2
 socket.on("user-has-disconnected", (user) => {
   console.log(`player ${user} has disconnected`);
 });
@@ -78,11 +80,13 @@ let textLoading = document.querySelector("#text-loading");
 let countdownFind = document.getElementById("countdownFindRoom");
 let countdownCreate = document.getElementById("countdownCreateRoom");
 
+// 6
 socket.on("player-2-ready", (roomCode, username) => {
   let code = JSON.parse(getCookie(`code-${roomCode}`));
   if (code != null) {
     textLoading.innerHTML = `${username} has in room`;
     createBtnReady.disabled = true;
+    // 7
     socket.emit("game-ready", code.player1);
     code.player2 = username;
     setCookie(`code-${codeField.value}`, JSON.stringify(code), 1);
@@ -92,15 +96,18 @@ socket.on("player-2-ready", (roomCode, username) => {
       countdownCreateRoom();
     }, 2000);
   } else {
+    // 9
     socket.emit("room-code-not-define", "Sorry, Can't Find The Room !!!");
   }
 });
 
+// 10
 socket.on("room-code-not-define", (message) => {
   countdownFind.innerHTML = message;
   countdownFind.style.color = "red";
 });
 
+// 8
 socket.on("game-ready", (username) => {
   let code = JSON.stringify({
     code: codeField2.value,
@@ -115,12 +122,6 @@ socket.on("game-ready", (username) => {
   setTimeout(() => {
     countdownFindRoom();
   }, 2000);
-});
-
-socket.on("player-close-room", (roomNumber) => {
-  console.log("player close room : " + roomNumber);
-  eraseCookie("code");
-  textLoading.innerHTML = "";
 });
 
 function buttonFunction(btn, btnBack) {
@@ -158,7 +159,7 @@ createBtnReady.addEventListener("click", () => {
 
 findBtnReady.addEventListener("click", () => {
   buttonFunction(findBtnReady, backButton2);
-
+  // 5 
   if (findBtnReady.innerHTML == "Unready") {
     socket.emit("player-2-ready", codeField2.value, userLogin.username);
   } else {
@@ -167,6 +168,7 @@ findBtnReady.addEventListener("click", () => {
 });
 
 // back button reset value
+// 3
 backButton.addEventListener("click", () => {
   socket.emit("close-room", codeField.value);
   codeField.value = "";
@@ -178,21 +180,12 @@ backButton2.addEventListener("click", () => {
   findBtnReady.disabled = true;
 });
 
-function closeDialogFindRoom() {
-  codeField2.value = "";
-  findBtnReady.disabled = true;
-  countdownFind.innerHTML = "";
-  $("#exampleModalToggle3").modal("toggle");
-}
-
-function closeDialogCreateRoom() {
-  codeField.value = "";
+// 4
+socket.on("player-close-room", (roomNumber) => {
+  console.log("player close room : " + roomNumber);
+  eraseCookie("code");
   textLoading.innerHTML = "";
-  createBtnReady.disabled = true;
-  generateCode.disabled = false;
-  countdownCreate.innerHTML = "";
-  $("#exampleModalToggle2").modal("toggle");
-}
+});
 
 // code generate
 generateCode.addEventListener("click", () => {
@@ -217,6 +210,7 @@ codeField2.addEventListener("keyup", () => {
   }
 });
 
+// COUNTDOWN 
 let timeLeftCreateRoom = 5;
 let timeLeftFindRoom = 5;
 
@@ -245,3 +239,20 @@ const countdownFindRoom = () => {
     window.location.href = "/gamesuit-player";
   }
 };
+
+// CLOSE DIALOG 
+function closeDialogFindRoom() {
+  codeField2.value = "";
+  findBtnReady.disabled = true;
+  countdownFind.innerHTML = "";
+  $("#exampleModalToggle3").modal("toggle");
+}
+
+function closeDialogCreateRoom() {
+  codeField.value = "";
+  textLoading.innerHTML = "";
+  createBtnReady.disabled = true;
+  generateCode.disabled = false;
+  countdownCreate.innerHTML = "";
+  $("#exampleModalToggle2").modal("toggle");
+}

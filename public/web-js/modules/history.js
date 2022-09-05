@@ -66,13 +66,11 @@ async function getHistory() {
       },
     });
     const result = await response.json();
-    console.log(result)
     if (!result.resultData[0]) {
       return;
     }
 
     let historyDetails = result.resultData[0].score_games;
-    console.log(historyDetails)
     historyDetails.forEach((history, index) => {
       let date = new Date(history.date_time);
 

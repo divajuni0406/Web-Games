@@ -115,6 +115,7 @@ function pick(playerOption) {
       await saveScore(payload);
     });
   }
+  return;
 }
 
 function resultPick(playerOption, callback) {

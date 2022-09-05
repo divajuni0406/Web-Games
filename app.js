@@ -1,7 +1,10 @@
 const dotenv = require("dotenv");
 const express = require("express");
 const cors = require("cors");
-// call morgan
+
+const swaggerUi = require("swagger-ui-express");
+const apiDocumentation = require("./API-Documentation.json");
+
 const morgan = require("morgan");
 const path = require("path");
 const app = express();
@@ -11,6 +14,8 @@ const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(apiDocumentation));
 
 app.use(cors());
 
@@ -22,11 +27,9 @@ const userRoutes = require("./routes/userRoutes");
 dotenv.config({ path: "./config/.env" });
 
 app.set("view engine", "ejs");
-// app.use(expressLayouts);
-// app.use(morgan("dev"));
+app.use(morgan("dev"));
 app.use(express.static("public"));
 
-// this is to call the function of json in express so that can accept file type of json from thunder plugin or front end
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -45,7 +48,6 @@ io.on("connection", (socket) => {
     splitUser = regex.exec(splitUser);
   }
   socket.broadcast.emit("current-link", socket.handshake.headers.referer);
-
   if (splitUser != undefined && splitUser[1] != undefined) {
     splitUser = splitUser[1].split("=");
     let objectUser = splitUser[1].split(" ");
@@ -69,12 +71,12 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("player-2-ready", roomCode, username);
   });
 
-  socket.on("room-code-not-define", (message, wrong, right) => {
-    socket.broadcast.emit(`room-code-not-define`, message, wrong, right);
-  });
-
   socket.on("game-ready", (username) => {
     socket.broadcast.emit(`game-ready`, username);
+  });
+
+  socket.on("room-code-not-define", (message) => {
+    socket.broadcast.emit(`room-code-not-define`, message);
   });
 
   socket.on("player-one-pick", (playerPick) => {

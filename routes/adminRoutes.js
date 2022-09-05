@@ -6,9 +6,9 @@ const middleware = require("../controller/middleware");
 
 // get render
 Routes.get("/master-data-admin", middleware.authRender, adminProccess.masterDataAdmin);
-Routes.get("/update-view-admin/:id", middleware.authApiAdmin, adminProccess.updateViewAdmin);
-Routes.get("/allHistoryUser/:id", middleware.authApiAdmin, adminProccess.allHistoryUser);
-Routes.get("/master-data-user", middleware.authRender, adminProccess.masterDataUser);
+Routes.get("/master-data-user", adminProccess.masterDataUser);
+Routes.get("/update-view-admin/:id", middleware.authApiAdmin, adminProccess.updateViewAdmin); // error open api
+Routes.get("/allHistoryUser/:id", middleware.authApiAdmin, adminProccess.allHistoryUser); // error open api
 // Routes.get('/add-view-admin', adminProccess.addViewAdmin);
 
 // get data
